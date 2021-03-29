@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_03_29_142415) do
 
+ActiveRecord::Schema.define(version: 2021_03_29_142415) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,6 +23,22 @@ ActiveRecord::Schema.define(version: 2021_03_29_142415) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "gender"
+  end
+
+  create_table "events", force: :cascade do |t|
+    t.string "type"
+    t.datetime "start_time"
+    t.datetime "end_time"
+    t.float "value_float"
+    t.string "value_string"
+    t.text "comment"
+    t.boolean "validated"
+    t.bigint "baby_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["baby_id"], name: "index_events_on_baby_id"
+    t.index ["user_id"], name: "index_events_on_user_id"
   end
 
   create_table "events", force: :cascade do |t|
