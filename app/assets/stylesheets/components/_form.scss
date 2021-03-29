@@ -1,9 +1,10 @@
-label{
+label {
   font-size: 24px;
   color: $font-color;
   font-weight: 700;
 }
-input[type=text]{
+
+input[type=text] {
   background-color: $form-bg;
   border: none;
   padding: 10px;
@@ -11,15 +12,21 @@ input[type=text]{
   font-size: 18px;
   border-radius: 3px;
 }
-input[type=submit]{
+
+input[type=submit] {
   color: white;
   font-weight: 900;
   background-color: $green;
   padding: 10px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   width: 170px;
   display: block;
   text-align: center;
   border: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
 }
