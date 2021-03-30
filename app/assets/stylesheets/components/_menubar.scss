@@ -1,0 +1,17 @@
+.menubar{
+  background-color: $pink;
+  width: 100vw;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  bottom: 0;
+  i{
+    color: white;
+    font-size: 25px;
+  }
+  a{
+    margin-bottom: 50px;
+  }
+}
