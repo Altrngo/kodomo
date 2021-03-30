@@ -1,4 +1,15 @@
 <body>
-  <h1>Sélectionner</h1>
-  <p>Un enfant</p>
+  <div class="container form">
+    <h1>Sélectionner</h1>
+    <p>Un enfant</p>
+    <% @babies.each do |baby| %>
+      <%# <div>
+        <%= cl_image_tag ship.photo.key, height: 200, width: 350, crop: :fill %>
+      <%# </div> %> 
+      <div>
+        <h1><%= baby.name %></h1>
+      </div>
+    <% end %>
+    
+  </div>
 </body>
