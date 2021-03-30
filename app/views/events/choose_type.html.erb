@@ -1,0 +1,15 @@
+<h1>Event type</h1>
+
+<% @types.each do |type| %>
+<%= type %>
+<% end %>
+
+<div>
+  <ul>
+    <% @types.each do |type| %>
+    <div>
+      <li><%= type %></li>
+    </div>
+    <% end %>
+  </ul>
+</div>

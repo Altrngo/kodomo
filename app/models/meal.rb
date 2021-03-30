@@ -1,0 +1,3 @@
+class Meal < Event
+
+end

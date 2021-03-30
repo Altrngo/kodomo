@@ -1,0 +1,3 @@
+class Sleep < Event
+
+end

@@ -1,0 +1,3 @@
+class Vaccine < Event
+
+end

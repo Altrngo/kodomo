@@ -1,0 +1,3 @@
+class BabyBottle < Event
+
+end
