@@ -3,6 +3,9 @@ class EventsController < ApplicationController
 
 def choose_type
   @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
+  @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
+  @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
+  @other_event_types = ["OtherEvent"]
 end
 
 
@@ -27,53 +30,5 @@ end
       render :new
     end
   end
-
-  # class BabyBottle < EventsController
-    
-  # end
-
-  # class Meal < EventsController
-    
-  # end
-
-  # class Sleep < EventsController
-    
-  # end
-
-  # class Diaper < EventsController
-    
-  # end
-
-  # class Wound < EventsController
-    
-  # end
-
-  # class Vaccine < EventsController
-    
-  # end
-
-  # class Temperature < EventsController
-    
-  # end
-
-  # class Drug < EventsController
-    
-  # end
-
-  # class Disease < EventsController
-    
-  # end
-
-  # class Weight < EventsController
-    
-  # end
-
-  # class Height < EventsController
-    
-  # end
-
-  # class OtherEvent < EventsController
-    
-  # end
 
 end
