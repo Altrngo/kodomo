@@ -1,1 +1,18 @@
-<h1>Hello, world</h1>
+<body>
+  <div class="container">
+    <div class="text">
+      <h1>Sélectionner</h1>
+      <p>Un enfant</p>
+    </div>
+      <% @babies.each do |baby| %>
+        <div class="card baby">
+          <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
+          <h2 class="baby_name"><%= baby.name %></h2>
+        </div>
+      <% end %>
+      <div class="card baby">
+        <i class="fas fa-plus"></i>
+        <h2 class="baby_name">Nouvel enfant</h2>
+      </div>
+  </div>
+</body>
