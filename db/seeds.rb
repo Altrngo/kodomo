@@ -19,4 +19,9 @@ baby_3 = Baby.create(name:"Leo",birth_date: 20210227, weight: 3.0, height: 58, g
 baby_3.photo.attach(io: file, filename: 'baby_3.jpg', content_type: 'image/jpg')
 puts "Created Baby 3 "
 
+file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617108891/Baby_4_ugkjls.jpg')
+baby_4 = Baby.create(name:"Constantin",birth_date: 20210127, weight: 2.0, height: 48, gender: "male")
+baby_4.photo.attach(io: file, filename: 'baby_4.jpg', content_type: 'image/jpg')
+puts "Created Baby 4 "
+
 puts 'Finished!'
