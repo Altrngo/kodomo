@@ -19,7 +19,7 @@
     <%= render 'shared/flashes' %>
     <%= yield %>
     <% unless controller.controller_name == "devise_controller" || "pages_controller" %>
-    <%= render 'shared/menubar' %>
+      <%= render 'shared/menubar' %>
     <% end %>
   </body>
 </html>
