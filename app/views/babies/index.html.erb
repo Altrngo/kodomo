@@ -4,10 +4,10 @@
     <p>Un enfant</p>
     <% @babies.each do |baby| %>
       <div>
-        <%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar" %>
+        <%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %>
       </div>
       <div>
-        <h1><%= baby.name %></h1>
+        <h2><%= baby.name %></h2>
       </div>
     <% end %>
     
