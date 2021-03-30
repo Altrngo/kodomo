@@ -25,3 +25,10 @@
 #color {
   color: $font-color;
 }
+
+.text-decoration {
+  text-decoration: none;
+  &:hover{
+    text-decoration: none;
+  }
+}

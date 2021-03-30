@@ -15,6 +15,10 @@ class BabiesController < ApplicationController
       render :new
     end
   end
+
+  def show
+    @baby = Baby.find(params[:id])
+  end
   
 
   private
