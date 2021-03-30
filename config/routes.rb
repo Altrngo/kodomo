@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :events, only: [ :choose_type, :new, :create ] do
       collection do
         get 'choose_type'
+        get 'new/baby_bottle'
       end
     end
   end
