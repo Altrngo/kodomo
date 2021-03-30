@@ -4,7 +4,7 @@ label {
   font-weight: 700;
 }
 
-input[type=text] {
+input, .form-control {
   background-color: $form-bg;
   border: none;
   padding: 10px;
