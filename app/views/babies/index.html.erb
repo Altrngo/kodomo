@@ -1,7 +1,9 @@
 <body>
   <div class="container">
-    <h1>Sélectionner</h1>
-    <p>Un enfant</p>
+    <div class="text">
+      <h1>Sélectionner</h1>
+      <p>Un enfant</p>
+    </div>
       <% @babies.each do |baby| %>
         <div class="card" id="baby">
           <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
