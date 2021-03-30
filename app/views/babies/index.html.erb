@@ -3,10 +3,14 @@
     <h1>Sélectionner</h1>
     <p>Un enfant</p>
       <% @babies.each do |baby| %>
-        <div class="card">
-          <%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %>
+        <div class="card" id="baby">
+          <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
           <h2><%= baby.name %></h2>
         </div>
       <% end %>
+      <div class="card" id="baby">
+          <img src="#" alt="">
+          <h2>Nouvel enfant</h2>
+        </div>
   </div>
 </body>
