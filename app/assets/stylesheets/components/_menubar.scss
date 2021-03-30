@@ -1,4 +1,4 @@
-.menubar{
+.menubar {
   background-color: $pink;
   width: 100vw;
   height: 60px;
@@ -7,11 +7,13 @@
   justify-content: space-around;
   position: fixed;
   bottom: 0;
-  i{
+
+  i {
     color: white;
     font-size: 25px;
   }
-  a{
+
+  a {
     margin-bottom: 50px;
   }
 }
