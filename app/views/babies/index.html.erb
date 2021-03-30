@@ -5,12 +5,12 @@
       <% @babies.each do |baby| %>
         <div class="card" id="baby">
           <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
-          <h2><%= baby.name %></h2>
+          <h2 id="baby_name"><%= baby.name %></h2>
         </div>
       <% end %>
       <div class="card" id="baby">
-          <img src="#" alt="">
-          <h2>Nouvel enfant</h2>
-        </div>
+        <i class="fas fa-plus"></i>
+        <h2 id="baby_name">Nouvel enfant</h2>
+      </div>
   </div>
 </body>
