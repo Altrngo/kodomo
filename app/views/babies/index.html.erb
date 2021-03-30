@@ -1,15 +1,12 @@
 <body>
-  <div class="container form">
+  <div class="container">
     <h1>Sélectionner</h1>
     <p>Un enfant</p>
-    <% @babies.each do |baby| %>
-      <div>
-        <%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %>
-      </div>
-      <div>
-        <h2><%= baby.name %></h2>
-      </div>
-    <% end %>
-    
+      <% @babies.each do |baby| %>
+        <div class="card">
+          <%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %>
+          <h2><%= baby.name %></h2>
+        </div>
+      <% end %>
   </div>
 </body>
