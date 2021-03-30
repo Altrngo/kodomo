@@ -1,8 +1,13 @@
-.button-circle{
+.button-circle {
   border-radius: 50%;
   background-color: $green;
   padding: 20px;
   /*box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1); */
   color: $white;
   font-weight: 700;
+}
+
+.circle-plus {
+  height: 25px;
+  width: 25px;
 }
