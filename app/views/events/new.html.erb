@@ -1,0 +1,19 @@
+<h1>hello world from new event view</h1>
+
+<body>
+  <div class="container">
+    <h1>Nouvel Event</h1>
+    <%= simple_form_for [@baby, @event] do |f| %>
+    <%= f.label :Quantité %>
+    <%= f.input :value_float %>
+    <%= f.label :Date %>
+    <%= f.input :start_time, as: :date, html5: true %>
+    <%= f.label :Heure %>    
+    <%= f.input :start_time, as: :time, html5: true %>
+    <%= f.label :Commentaire %>
+    <%= f.input :comment %>
+
+    <%= f.submit %>
+    <% end %>
+  </div>
+</body>

@@ -13,11 +13,15 @@
   </head>
 
   <body>
-    <%= render 'shared/navbar' %>
+    <% unless controller.controller_name == "devise_controller" || "pages_controller" %>
+      <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
     <div class="container-page">
       <%= yield %>
     </div>
-    <%= render 'shared/menubar' %>
+    <% unless controller.controller_name == "devise_controller" || "pages_controller" %>
+      <%= render 'shared/menubar' %>
+    <% end %>
   </body>
 </html>
