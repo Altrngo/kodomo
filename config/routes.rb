@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  
+
+
   resources :babies, only: [:index, :show, :new, :create] do
     resources :events, only: [ :new, :create ]
   end
