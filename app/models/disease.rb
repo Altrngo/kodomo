@@ -1,3 +1,0 @@
-class Disease < Event
-
-end

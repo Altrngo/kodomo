@@ -1,6 +1,9 @@
 class BabiesController < ApplicationController
   def index
     @babies = Baby.all
+    # @babies = current_userBaby.all
+    #@babies = current_user.babies.all
+    # @babies = policy_scope(Baby)
   end
 
   def new

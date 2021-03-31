@@ -4,7 +4,17 @@ label {
   font-weight: 700;
 }
 
-input[type=text] {
+input, .form-control {
+  background-color: $form-bg;
+  border: none;
+  padding: 10px;
+  color: #A79696;
+  font-size: 18px;
+  border-radius: 3px;
+  width: 100%;
+}
+
+input[type=number] {
   background-color: $form-bg;
   border: none;
   padding: 10px;
@@ -25,9 +35,26 @@ input[type=submit] {
   display: block;
   text-align: center;
   border: none;
+  &:hover{
+    color: white;
+  }
 }
 
 input:focus,
 textarea:focus {
   outline: none;
+}
+
+.form-control {
+  background-color: $form-bg;
+}
+
+.gray_link{
+  color: lightgray;
+}
+a{
+  color: lightgray;
+  &:hover{
+    color: lightgray;
+  }
 }

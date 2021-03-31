@@ -1,3 +1,0 @@
-class Diaper < Event
-
-end

@@ -1,3 +1,0 @@
-class Drug < Event
-
-end
