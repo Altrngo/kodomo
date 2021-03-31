@@ -1,3 +1,0 @@
-class Wound < Event
-
-end
