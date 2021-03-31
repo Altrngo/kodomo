@@ -1,3 +1,0 @@
-class Temperature < Event
-
-end
