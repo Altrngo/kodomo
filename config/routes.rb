@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   
   resources :babies, only: [:index, :show, :new, :create] do
-    resources :events, only: [ :choose_type, :new, :create ] do
+    resources :events, only: [:choose_type, :new, :create, :index] do
       collection do
         get 'choose_type'
         get 'new'

@@ -10,8 +10,8 @@ class EventsController < ApplicationController
 
 
   def index
-    @baby = baby.where(params[:baby_id])
-    @event = event.all
+    @baby = Baby.where(params[:baby_id])
+    @event = Event.all
   end
 
   def new
