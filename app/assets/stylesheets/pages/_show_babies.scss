@@ -1,15 +1,37 @@
 .baby-profile-card{
   height: 190px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
 }
 .last-sleep, .last-eat, .fa-utensils, .fa-moon{
   color: white;
   p{
     color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
   }
-  a{
+  i{
     color: white;
+    font-size: 15px;
+    width: 10px;
+    margin-right: 10px;
+  }
+}
+
+.bg-foot{
+  height: 100px;
+  background: url("feet.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.heal-card{
+  height: 100px;
+}
+.all-events{
+  height: 100px;
+  i{
+    font-size: 60px;
   }
 }
