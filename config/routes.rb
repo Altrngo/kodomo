@@ -2,13 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'babies#index'
   
-  resources :babies, only: [:index] do
-    resources :events, only: [ :choose_type, :new, :create ] do
-      collection do
-        get 'choose_type'
-        get 'new/baby_bottle'
-      end
-    end
+  resources :babies, only: [:index, :show, :new, :create] do
+    resources :events, only: [ :new, :create ]
   end
 
   # get '/babies/:id/events/choose_type', to: 'events#choose_type', as: 'event_type'
