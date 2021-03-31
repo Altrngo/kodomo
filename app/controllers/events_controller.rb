@@ -9,7 +9,7 @@ class EventsController < ApplicationController
 
   def timeline
     @baby = Baby.where(params[:baby_id])
-    @event = Event.all
+    @events = Event.all
   end
 
   def new
