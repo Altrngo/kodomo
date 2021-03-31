@@ -17,7 +17,9 @@
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="container-page">
+      <%= yield %>
+    </div>
     <% unless controller.controller_name == "devise_controller" || "pages_controller" %>
       <%= render 'shared/menubar' %>
     <% end %>
