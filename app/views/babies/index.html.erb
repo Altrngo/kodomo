@@ -4,10 +4,12 @@
     <p>Un enfant</p>
   </div>
     <% @babies.each do |baby| %>
-      <div class="card baby">
-        <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
-        <h2 class="baby_name_index"><%= baby.name %></h2>
-      </div>
+      <%= link_to baby_path(baby), class: "text-decoration" do %>
+        <div class="card baby">
+          <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
+          <h2 class="baby_name_index"><%= baby.name %></h2>
+        </div>
+      <% end %>
     <% end %>
     <%= link_to new_baby_path, class: "text-decoration" do %>
     <div class="card baby">
