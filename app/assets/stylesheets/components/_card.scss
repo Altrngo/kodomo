@@ -10,3 +10,11 @@
     color: $pink-card;
   }
 }
+
+.event-card {
+  border: none;
+  background-color: $card-bg;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}

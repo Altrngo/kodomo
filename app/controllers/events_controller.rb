@@ -1,54 +1,41 @@
 class EventsController < ApplicationController
 
 
-
-
-  class BabyBottle < EventsController
-    
+  def choose_type
+    # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
+    @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
+    @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
+    @other_event_types = ["OtherEvent"]
   end
 
-  class Meal < EventsController
-    
+
+  def index
+    @baby = baby.where(params[:baby_id])
+    @event = event.all
   end
 
-  class Sleep < EventsController
-    
+  def new
+    @baby = Baby.find(params[:baby_id])
+    @event = Event.new
   end
 
-  class Diaper < EventsController
-    
+  def create
+    @baby = Baby.find(params[:baby_id])
+    @event = Event.new(event_params)
+    @event.baby = @baby
+    @event.user = current_user
+    if @event.save
+      redirect_to babies_path(@baby)
+    else
+      render :new
+    end
   end
 
-  class Wound < EventsController
-    
-  end
 
-  class Vaccine < EventsController
-    
-  end
+  private
 
-  class Temperature < EventsController
-    
-  end
-
-  class Drug < EventsController
-    
-  end
-
-  class Disease < EventsController
-    
-  end
-
-  class Weight < EventsController
-    
-  end
-
-  class Height < EventsController
-    
-  end
-
-  class OtherEvent < EventsController
-    
+  def event_params
+    params.require(:event).permit(:type, :start_time, :end_time, :value_float, :value_string, :comment, :validated, :baby_id, :user_id)
   end
 
 end
