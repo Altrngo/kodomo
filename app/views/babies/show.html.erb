@@ -4,22 +4,39 @@
     <p>2 mois et 14 jours</p>
   </div>
   <div class="row">
-    <div class="card column-12">
-      <div class="last-eat"></div>
-      <div class="last-sleep"></div>
+    <div class="card col-12 style="background: url('<%= cl_image_tag @baby.photo.key, crop: :fill %>)";>
+      <div class="d-flex justify-content-between">
+        <div class="last-eat d-flex ">
+          <i class="fas fa-utensils"></i>
+          <p>12:10</p>
+        </div>
+        <div class="last-sleep d-flex flex-row-reverse">
+          <i class="fas fa-moon"></i>
+          <p>12:25</p>
+        </div>
+      </div>
     </div>
   </div>
   <div class="row">
-    <div class="column-6">
-      <div class="card last-event"></div>
+    <div class="col-8">
+      <div class="card last-event">
+        <p>Dernier evenement</p>
+      </div>
     </div>
-    <div class="column-6">
-      <div class="card heal-card"></div>
+    <div class="col">
+      <div class="card heal-card">
+        <i class="fas fa-heart"></i>
+        <p>Santé</p>
+      </div>
+
     </div>
   </div>
   <div class="row">
-    <div class="column-12">
-      <div class="all-events card"></div>
+    <div class="col">
+      <div class="all-events card d-flex flex-row-reverse justify-content-around">
+        <i class="far fa-calendar-alt"></i>
+        <p>Evenements passés</p>
+      </div>
     </div>
   </div>
 </div>
