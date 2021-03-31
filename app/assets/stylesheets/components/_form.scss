@@ -44,11 +44,11 @@ input:focus,
 textarea:focus {
   outline: none;
 }
-<<<<<<< HEAD
 
 .form-control {
   background-color: $form-bg;
-=======
+}
+
 .gray_link{
   color: lightgray;
 }
@@ -57,5 +57,4 @@ a{
   &:hover{
     color: lightgray;
   }
->>>>>>> ee1c7608e5e9a6a65e1a989d41274d510c56358d
 }
