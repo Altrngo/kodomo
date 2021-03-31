@@ -17,8 +17,10 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <% @daily_types.each do |type| %>
+      <%= link_to new_baby_path, class: "text-decoration" do %>
         <div class="card baby">
           <h2><%= type %></h2>
+        <% end %>
         </div>
         <% end %>
       </div>

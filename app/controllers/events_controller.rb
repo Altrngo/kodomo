@@ -1,12 +1,12 @@
 class EventsController < ApplicationController
 
 
-def choose_type
-  # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
-  @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
-  @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
-  @other_event_types = ["OtherEvent"]
-end
+  def choose_type
+    # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
+    @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
+    @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
+    @other_event_types = ["OtherEvent"]
+  end
 
 
   def index
@@ -29,6 +29,13 @@ end
     else
       render :new
     end
+  end
+
+
+  private
+
+  def event_params
+    params.require(:event).permit(:type, :start_time, :end_time, :value_float, :value_string, :comment, :validated, :baby_id, :user_id)
   end
 
 end

@@ -1,0 +1,3 @@
+class BabyBottlesController < EventsController
+  
+end
