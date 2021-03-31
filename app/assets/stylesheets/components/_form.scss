@@ -25,9 +25,21 @@ input[type=submit] {
   display: block;
   text-align: center;
   border: none;
+  &:hover{
+    color: white;
+  }
 }
 
 input:focus,
 textarea:focus {
   outline: none;
+}
+.gray_link{
+  color: lightgray;
+}
+a{
+  color: lightgray;
+  &:hover{
+    color: lightgray;
+  }
 }

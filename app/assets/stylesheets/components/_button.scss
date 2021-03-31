@@ -15,16 +15,15 @@
 }
 .button-secondary {
   font-weight: 900;
-  color: $white;
-  background-color: lightgray;
+  color: $green;
+  background-color: #d4f7e5;
   padding: 10px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
   font-size: 18px;
   width: 170px;
   display: block;
   text-align: center;
   &:hover{
     text-decoration: none;
-    color: white;
+    color: $green;
   }
 }

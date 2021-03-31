@@ -1,9 +1,12 @@
 <div class="bg-img">
   <div class="container d-flex align-items-center flex-column justify-content-center pt-5">
     <%= image_tag "logo.png", class: "logo" %>
+    <div class="icon-animation-box">
+    <%= image_tag "family.svg", class: "icon pulsate-bck " %>
+    </div>
     <div class="margin-top-home">
       <%= link_to "Login", user_session_path, class: "button button-full-width" %>
-      <%= link_to "Signup", new_user_registration_path, class: "button-secondary mt-1 button-full-width " %>
+      <%= link_to "Signup", new_user_registration_path, class: "button-secondary mt-1 button-full-width mt-2" %>
     </div>
   </div>
 </div>
