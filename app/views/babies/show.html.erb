@@ -4,7 +4,8 @@
     <p>2 mois et 14 jours</p>
   </div>
   <div class="row">
-    <div class="card col-12 baby-profile-card" style="background: url('<%= cloudinary_url @baby.photo.key %>')">
+    <div class="col">
+    <div class="card baby-profile-card" style="background: url('<%= cloudinary_url @baby.photo.key %>') ">
       <div class="d-flex justify-content-between">
         <div class="last-eat d-flex ">
           <i class="fas fa-utensils"></i>
@@ -15,6 +16,7 @@
           <p>12:25</p>
         </div>
       </div>
+    </div>
     </div>
   </div>
   <div class="row">
