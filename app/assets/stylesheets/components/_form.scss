@@ -24,16 +24,6 @@ input[type=number] {
   width: 100%;
 }
 
-select{
-  background-color: $form-bg;
-  border: none;
-  padding: 10px;
-  color: #A79696;
-  font-size: 18px;
-  border-radius: 3px;
-  width: 100%;
-}
-
 input[type=submit] {
   color: white;
   font-weight: 900;
@@ -50,4 +40,8 @@ input[type=submit] {
 input:focus,
 textarea:focus {
   outline: none;
+}
+
+.form-control {
+  background-color: $form-bg;
 }
