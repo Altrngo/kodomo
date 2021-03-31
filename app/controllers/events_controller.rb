@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
 
-
   def choose_type
     # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
     @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
@@ -8,8 +7,7 @@ class EventsController < ApplicationController
     @other_event_types = ["OtherEvent"]
   end
 
-
-  def index
+  def timeline
     @baby = Baby.where(params[:baby_id])
     @event = Event.all
   end
