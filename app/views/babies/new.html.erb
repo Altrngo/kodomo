@@ -1,9 +1,9 @@
 <body>
   <div class="container">
     <h1>Nouvel enfant</h1>
-    <%= simple_form_for(@baby) do |f| %>
+    <%= simple_form_for(@baby, html: { novalidate: false }) do |f| %>
     <%= f.label :Nom %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name%>
     <%= f.label :Sexe %>
     <%= f.text_field :gender %>
     <%= f.label :Date_de_naissance %>
