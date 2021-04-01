@@ -11,7 +11,7 @@
       <div class="carousel-inner">
         <div class="carousel-item active">
           <% @daily_types.each do |type| %>
-            <%= link_to new_baby_event_path, class: "text-decoration" do %>
+            <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
               <div class="card baby">
                 <h2><%= type %></h2>
               </div>
@@ -20,17 +20,21 @@
         </div>
         <div class="carousel-item">
           <% @health_types.each do |type| %>
+            <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
               <div class="card baby">
                 <h2><%= type %></h2>
               </div>
+              <% end %>
             <% end %>
         </div>
         <div class="carousel-item">
           <% @other_event_types.each do |type| %>
-            <div class="card baby">
-              <h2><%= type %></h2>
-            </div>
-          <% end %>
+            <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
+              <div class="card baby">
+                <h2><%= type %></h2>
+              </div>
+              <% end %>
+            <% end %>
         </div>
       </div>
       <a class="carousel-control-prev" role="button" data-target="#carouselExampleIndicators" data-slide="prev">
