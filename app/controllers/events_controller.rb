@@ -1,6 +1,5 @@
 class EventsController < ApplicationController
 
-
   def choose_type
     # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
     # @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
@@ -12,10 +11,10 @@ class EventsController < ApplicationController
     @other_event_types = ["Autre événement"]
   end
 
-
-  def index
-    @baby = baby.where(params[:baby_id])
-    @event = event.all
+  def timeline
+    @baby = Baby.find(params[:id])
+    # @events = Event.where(baby: @baby).sort_by { |event| event.start_time}.reverse
+    @events = Event.where(baby: @baby)
   end
 
   def new
