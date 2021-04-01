@@ -5,7 +5,14 @@
       <p>Un evénement</p>
       <% @events.each do |event| %>
         <div class="card baby">
-          <h2 class="baby_name_index"><%= event.comment %></h2>
+          <h2><%= event.type %></h2>
+          <% if event.value_float != nil %>
+            <%= event.value_float%>
+            <% elsif event.value_string != nil%>
+            <%= event.value_string%>
+            <% else%>
+            <%= ""%>
+          <% end %>
         </div>
       <% end %>
     </div>
