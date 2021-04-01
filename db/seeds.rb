@@ -29,11 +29,11 @@ require "open-uri"
 puts 'Cleaning database...'
 Event.destroy_all
 puts 'Creating Bibi...'
-bibi = Event.create!(start_time: 20210330112613, end_time: 20210330113530, value_float: 150, comment:"a bu tout son bib", validated: true, baby_id: 26, user_id: 1)
-bibi = Event.create!(start_time: 20210330112614, end_time: 20210330113540, value_float: 250, comment:"a fait son rot", validated: true, baby_id: 23, user_id: 1)
-bibi = Event.create!(start_time: 20210330112613, end_time: 20210330113530, value_float: 200, comment:"a rien bu", validated: true, baby_id: 26, user_id: 1)
-bibi = Event.create!(start_time: 20210330112614, end_time: 20210330113540, value_float: 300, comment:"a trop bu", validated: true, baby_id: 23, user_id: 1)
-bibi = Event.create!(start_time: 20210330112613, end_time: 20210330113530, value_float: 400, comment:"aurait pu boire plus", validated: true, baby_id: 26, user_id: 1)
-bibi = Event.create!(start_time: 20210330112614, end_time: 20210330113540, value_float: 500, comment:"a vomi", validated: true, baby_id: 23, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0) , end_time: DateTime.new(2021,3,5,12,35,0) , value_float: 150, comment:"a bu tout son bib", validated: true, baby_id: 26, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0), end_time: DateTime.new(2021,3,5,12,35,0), value_float: 250, comment:"a fait son rot", validated: true, baby_id: 23, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0), end_time: DateTime.new(2021,3,5,12,35,0), value_float: 200, comment:"a rien bu", validated: true, baby_id: 26, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0), end_time: DateTime.new(2021,3,5,12,35,0), value_float: 300, comment:"a trop bu", validated: true, baby_id: 23, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0), end_time: DateTime.new(2021,3,5,12,35,0), value_float: 400, comment:"aurait pu boire plus", validated: true, baby_id: 26, user_id: 1)
+bibi = Event.create!(start_time: DateTime.new(2021,3,5,12,32,0), end_time: DateTime.new(2021,3,5,12,35,0), value_float: 500, comment:"a vomi", validated: true, baby_id: 23, user_id: 1)
 puts "Bibi Created... "
 puts 'Finished!'
