@@ -11,9 +11,9 @@
             <div>
               <h2>Biberon</h2>
               <h2><%= event.type %></h2>
-              <p><%= event.start_time %></p>
+              <p><%= event.start_time.strftime("%m.%d.%Y") %> à <%= event.start_time.strftime("%H:%M") %></p>
               <p><%= event.value_string %></p>
-              <p><%= event.value_float %></p>
+              <p><%= event.value_float.to_i %> ml</p>
               <p><%= event.comment %></p>
             </div>
           </div>
