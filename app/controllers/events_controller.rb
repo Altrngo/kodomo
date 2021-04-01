@@ -8,8 +8,8 @@ class EventsController < ApplicationController
   end
 
   def timeline
-    @baby = Baby.find(params[:baby_id])
-    @events = Event.all
+    @baby = Baby.find(params[:id])
+    @events = Event.where(baby: @baby)
   end
 
   def new

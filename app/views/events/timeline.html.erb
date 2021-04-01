@@ -3,6 +3,12 @@
     <div class="text-up">
       <h1><%= @baby.name %></h1>
       <p>Un evénement</p>
+      <% @events.each do |event| %>
+        <div class="card baby">
+          <h2 class="baby_name_index"><%= event.comment %></h2>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>
+
