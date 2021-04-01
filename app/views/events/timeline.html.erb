@@ -5,17 +5,24 @@
       <p>Un evénement</p>
     </div>
     <div class="timeline">
+      <% last_date = [] %>
       <% @events.each do |event| %>
         <div class="container-timeline left">
-          <div class="card event" id="card-timeline">
-            <div>
-              <h2>Biberon</h2>
-              <h2><%= event.type %></h2>
-              <p><%= event.start_time.strftime("%m.%d.%Y") %> à <%= event.start_time.strftime("%H:%M") %></p>
-              <p><%= event.value_string %></p>
-              <p><%= event.value_float.to_i %> ml</p>
-              <p><%= event.comment %></p>
+          <% if last_date.last != event.start_time %>
+            <div class="date-timeline">
+              <h2><%= event.start_time.strftime("%m.%d.%Y") %></h2>
+              <% last_date << event.start_time %>
             </div>
+          <% else %>
+            <%= "" %>
+          <% end %>
+          <div class="card event" id="card-timeline">
+            <h2>Biberon</h2>
+            <h2><%= event.type %></h2>
+            <p><%= event.start_time.strftime("%m.%d.%Y") %> à <%= event.start_time.strftime("%H:%M") %></p>
+            <p><%= event.value_string %></p>
+            <p><%= event.value_float.to_i %> ml</p>
+            <p><%= event.comment %></p>
           </div>
         </div>
       <% end %>
