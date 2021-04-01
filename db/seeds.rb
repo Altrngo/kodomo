@@ -40,3 +40,4 @@ puts 'Finished!'
 # bibi = Event.create!(start_time: 20210330112613, end_time: 20210330113530, value_float: 150, comment:"a bu tout son bib", validated: true, baby_id: 1, user_id: 1)
 # puts "Bibi Created... "
 # puts 'Finished!'
+

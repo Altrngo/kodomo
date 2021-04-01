@@ -3,9 +3,13 @@ class EventsController < ApplicationController
 
   def choose_type
     # @types = ["BabyBottle", "Meal", "Sleep", "Diaper", "Wound", "Vaccine", "Temperature", "Drug", "Disease", "Weight", "Height", "OtherEvent"]
-    @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
-    @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
-    @other_event_types = ["OtherEvent"]
+    # @daily_types =["BabyBottle", "Meal", "Sleep", "Diaper"]
+    # @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
+    # @other_event_types = ["OtherEvent"]
+
+    @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
+    @health_types = ["Bobo", "Vaccin", "Témperature", "Médicament", "Maladie"]
+    @other_event_types = ["Autre événement"]
   end
 
 
@@ -17,6 +21,7 @@ class EventsController < ApplicationController
   def new
     @baby = Baby.find(params[:baby_id])
     @event = Event.new
+    # raise
   end
 
   def create
