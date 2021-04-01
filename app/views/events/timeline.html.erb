@@ -3,19 +3,21 @@
     <div class="text-up">
       <h1><%= @baby.name %></h1>
       <p>Un evénement</p>
-      div
-      <% @events.each do |event| %>
-        <div class="card event">
-          <h2><%= event.type %></h2>
-          <% if event.value_float != nil %>
-            <%= event.value_float %>
-            <% elsif event.value_string != nil %>
-            <%= event.value_string %>
-            <% else %>
-            <%= "" %>
-          <% end %>
-        </div>
-      <% end %>
+      <div class="cards-timeline">
+        <% @events.each do |event| %>
+          <div class="card event">
+            <h2><%= event.type %></h2>
+            <h2><%= event.start_time %></h2>
+            <% if event.value_float != nil %>
+              <%= event.value_float %>
+              <% elsif event.value_string != nil %>
+              <%= event.value_string %>
+              <% else %>
+              <%= "" %>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
