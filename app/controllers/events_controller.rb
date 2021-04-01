@@ -8,7 +8,7 @@ class EventsController < ApplicationController
     # @other_event_types = ["OtherEvent"]
 
     @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
-    @health_types = ["Bobo", "Vaccin", "Temperature", "Médicament", "Maladie"]
+    @health_types = ["Bobo", "Vaccin", "Témperature", "Médicament", "Maladie"]
     @other_event_types = ["Autre événement"]
   end
 
