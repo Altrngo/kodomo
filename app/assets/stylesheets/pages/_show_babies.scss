@@ -36,7 +36,7 @@
 .heal-card {
   height: 100px;
 
-  p{
+  p {
     z-index: 2;
   }
 
@@ -54,6 +54,37 @@
   color: $pink;
 
   i {
-    font-size: 60px;
+    font-size: 70px;
+    display: block;
+    position: absolute;
+    right: 40px;
+    color: $pink;
   }
+
+  p {
+    display: block;
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+  }
+}
+
+.title-child {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+
+  p {
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.card-title-dark {
+  font-size: 18px;
+  color: $font-color;
+  font-weight: 700;
 }

@@ -5,30 +5,36 @@
   </div>
   <div class="row">
     <div class="col">
-    <div class="card baby-profile-card mb-3" style="background: url('<%= cloudinary_url @baby.photo.key %>') ">
-      <div class="d-flex justify-content-between">
-        <div class="last-eat d-flex align-items-center">
-          <i class="fas fa-utensils"></i>
-          <p>12:10</p>
+      <div class="card baby-profile-card mb-3" style="background: url('<%= cloudinary_url @baby.photo.key %>') ">
+        <div class="d-flex justify-content-between">
+          <div class="last-eat d-flex align-items-center">
+            <i class="fas fa-utensils"></i>
+            <p>12:10</p>
+          </div>
+          <div class="last-sleep d-flex flex-row-reverse align-items-center">
+            <i class="fas fa-moon"></i>
+            <p>12:25</p>
+          </div>
         </div>
-        <div class="last-sleep d-flex flex-row-reverse align-items-center">
-          <i class="fas fa-moon"></i>
-          <p>12:25</p>
+        <div class="title-child">
+          <p>Fiche enfant</p>
         </div>
       </div>
-    </div>
     </div>
   </div>
   <div class="row">
     <div class="col-8">
-      <div class="card last-event bg-foot mb-3 d-flex flex-column align-items-end">
-        <p>Dernier evenement</p>
+      <div class="card last-event bg-foot mb-3 d-flex flex-column align-items-end ">
+        <div class="title-child">
+          <p>Dernier evenement</p>
+        </div>
+
       </div>
     </div>
     <div class="col">
       <div class="card heal-card mb-3 d-flex align-items-center justify-content-center">
         <i class="fas fa-heart"></i>
-        <p>Santé</p>
+        <p class="card-title-dark">Santé</p>
       </div>
 
     </div>
@@ -36,8 +42,12 @@
   <div class="row">
     <div class="col">
       <div class="all-events card d-flex flex-row-reverse justify-content-around">
-        <i class="far fa-calendar-alt"></i>
-        <p>Evenements passés</p>
+        <div>
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <div class="">
+          <p class="card-title-dark">Evenements passés</p>
+        </div>
       </div>
     </div>
   </div>
