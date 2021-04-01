@@ -21,14 +21,7 @@ class BabiesController < ApplicationController
 
   def show
     @baby = Baby.find(params[:id])
-  end
-
-  def age
-    @baby= Baby.find(params[:id])
-    start_time = @baby.birth_date
-    end_time = Date.today
-
-    TimeDifference.between(start_time, end_time).humanize
+    @age = @baby.age
   end
 
   helper_method :age
