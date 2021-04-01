@@ -4,20 +4,22 @@
       <h1><%= @baby.name %></h1>
       <p>Un evénement</p>
     </div>
-
-<div class="timeline">
-  <% @events.each do |event| %>
-    <div class="container left">
-      <div class="card event">
-        <div>
-          <h2><%= event.type %></h2>
-          <p><%= event.start_time %></p>
-          <p><%= event.value_string %></p>
-          <p><%= event.value_float %></p>
-          <p><%= event.comment %></p>
+    <div class="timeline">
+      <% @events.each do |event| %>
+        <div class="container-timeline left">
+          <div class="card event" id="card-timeline">
+            <div>
+              <h2>Biberon</h2>
+              <h2><%= event.type %></h2>
+              <p><%= event.start_time %></p>
+              <p><%= event.value_string %></p>
+              <p><%= event.value_float %></p>
+              <p><%= event.comment %></p>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-  <% end %>
+  </div>
 </div>
 
