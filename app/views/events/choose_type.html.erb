@@ -1,0 +1,57 @@
+<body>
+  <div class="container">
+
+    <div class="text">
+      <h1>Add</h1>
+      <p>an event</p>
+    </div>
+
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <% @daily_types.each do |type| %>
+      <%= link_to new_baby_event_path, class: "text-decoration" do %>
+        <div class="card baby">
+          <h2><%= type %></h2>
+        <% end %>
+        </div>
+        <% end %>
+      </div>
+    <div class="carousel-item">
+      <div>
+        <% @health_types.each do |type| %>
+           <div class="card baby">
+              <h2><%= type %></h2>
+            </div>
+          <% end %>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div>
+        <% @other_event_types.each do |type| %>
+          <div class="card baby">
+            <h2><%= type %></h2>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+  </div>
+</body>

@@ -1,0 +1,13 @@
+
+<body>
+  <div class="container">
+    <h1>Nouvel "Event"</h1>
+    <%= simple_form_for [@baby, @event] do |f| %>
+    <%= f.input :value_float, :label => 'Quantité (ml)' %>
+    <%= f.input :start_time, as: :date, :label => 'Date', html5: true %>
+    <%= f.input :start_time, as: :time, :label => 'Heure', html5: true %>
+    <%= f.input :comment, :label => 'Commentaire' %>
+    <%= f.submit %>
+    <% end %>
+  </div>
+</body>
