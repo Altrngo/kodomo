@@ -1,17 +1,23 @@
-.baby-profile-card{
+.baby-profile-card {
   height: 190px;
   background-position: center !important;
   background-repeat: no-repeat !important;
   background-size: cover !important;
 }
-.last-sleep, .last-eat, .fa-utensils, .fa-moon{
+
+.fa-moon,
+.fa-utensils,
+.last-eat,
+.last-sleep {
   color: white;
-  p{
+
+  p {
     color: white;
-    margin-top: 0px;
-    margin-bottom: 0px;
+    margin-top: 0;
+    margin-bottom: 0;
   }
-  i{
+
+  i {
     color: white;
     font-size: 15px;
     width: 10px;
@@ -19,19 +25,35 @@
   }
 }
 
-.bg-foot{
+.bg-foot {
   height: 100px;
   background: url("feet.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.heal-card{
+
+.heal-card {
   height: 100px;
+
+  p{
+    z-index: 2;
+  }
+
+  i {
+    color: $pink;
+    position: absolute;
+    font-size: 80px;
+    width: 100%;
+    text-align: center;
+  }
 }
-.all-events{
+
+.all-events {
   height: 100px;
-  i{
+  color: $pink;
+
+  i {
     font-size: 60px;
   }
 }
