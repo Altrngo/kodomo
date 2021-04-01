@@ -21,8 +21,10 @@ class BabiesController < ApplicationController
 
   def show
     @baby = Baby.find(params[:id])
+    @age = @baby.age
   end
-  
+
+  helper_method :age
 
   private
 
