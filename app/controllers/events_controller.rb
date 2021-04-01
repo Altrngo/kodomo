@@ -25,14 +25,16 @@ class EventsController < ApplicationController
   end
 
   def create
-    @baby = Baby.find(params[:baby_id])
+    @baby = Baby.find(params[:id])
     @event = Event.new(event_params)
     @event.baby = @baby
     @event.user = current_user
     if @event.save
       redirect_to babies_path(@baby)
+      raise
     else
       render :new
+      raise
     end
   end
 
