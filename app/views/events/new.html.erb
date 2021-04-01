@@ -20,7 +20,8 @@
             <%= f.submit %>
           <% end %>
         <% elsif params["type"] == "Dodo" %>
-            <h2><%= params["type"] %></h2>
+            <h1><%= params["type"] %></h1>
+            <h2>Nouvel Evénement</h2>
             <%= simple_form_for [@baby, @event] do |f| %>
             <%= f.input :start_time, as: :datetime, :label => 'Début', html5: true %>
             <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true %>
@@ -28,7 +29,8 @@
             <%= f.submit %>
           <% end %>
           <% elsif params["type"] == "Couche" %>
-              <h2><%= params["type"] %></h2>
+              <h1><%= params["type"] %></h1>
+            <h2>Nouvel Evénement</h2>
               <%= simple_form_for [@baby, @event] do |f| %>
               <%= f.input :value_string, as: :select, collection: Event::DIAPER_CONTENT, label: "Contenu" %>
               <%= f.input :start_time, as: :datetime, :label => 'Date et Heure', html5: true %>
@@ -36,14 +38,16 @@
               <%= f.submit %>
           <% end %>
           <% elsif params["type"] == "Bobo" || "Vaccin" || "Témperature" || "Médicament" %>
-            <h2><%= params["type"] %></h2>
+            <h1><%= params["type"] %></h1>
+            <h2>Nouvel Evénement</h2>
             <%= simple_form_for [@baby, @event] do |f| %>
             <%= f.input :start_time, as: :datetime, :label => 'Date et Heure', html5: true %>
             <%= f.input :comment, :label => 'Commentaire' %>
             <%= f.submit %>
           <% end %>
           <% elsif params["type"] == "Maladie" %>
-            <h2><%= params["type"] %></h2>
+            <h1><%= params["type"] %></h1>
+            <h2>Nouvel Evénement</h2>
             <%= simple_form_for [@baby, @event] do |f| %>
             <%= f.input :start_time, as: :datetime, :label => 'Début', html5: true %>
             <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true %>
