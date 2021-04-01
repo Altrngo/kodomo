@@ -25,3 +25,18 @@ baby_4.photo.attach(io: file, filename: 'baby_4.jpg', content_type: 'image/jpg')
 puts "Created Baby 4 "
 
 puts 'Finished!'
+
+# puts 'Cleaning database...'
+# Event.destroy_all
+# puts 'Creating Bibi...'
+# bibi = Event.create!(type: "BabyBottle", start_time: 20210330112613, end_time: 20210330113530, value_float: 150, comment:"a bu tout son bib", validated: true, baby_id: 1, user_id: 1)
+# puts "Bibi Created... "
+# puts 'Finished!'
+
+
+# puts 'Cleaning database...'
+# Event.destroy_all
+# puts 'Creating Bibi...'
+# bibi = Event.create!(start_time: 20210330112613, end_time: 20210330113530, value_float: 150, comment:"a bu tout son bib", validated: true, baby_id: 1, user_id: 1)
+# puts "Bibi Created... "
+# puts 'Finished!'
