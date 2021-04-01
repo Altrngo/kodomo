@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
-  
+
+
   resources :babies, only: [:index, :show, :new, :create] do
     get 'timeline' => 'events#timeline', on: :member, as: 'event_timeline'
     resources :events, only: [:choose_type, :new, :create] do
