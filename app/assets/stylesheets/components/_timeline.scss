@@ -2,6 +2,15 @@
   box-sizing: border-box;
 }
 
+.search-form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-control {
+  margin-bottom: 10px;
+}
 
 /* The actual timeline (the vertical ruler) */
 .timeline {
@@ -10,8 +19,21 @@
   margin: 0 auto;
 }
 
+.date-timeline  {
+  margin-left: 50px;
+}
+
 #card-timeline {
   margin-left: 55px;
+  margin-right: 0;
+}
+
+.text-timeline {
+  margin-bottom: 0;
+}
+
+#time {
+  font-weight: bold;
 }
 
 /* The actual timeline (the vertical ruler) */
