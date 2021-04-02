@@ -1,0 +1,3 @@
+class Temperature < Event
+
+end

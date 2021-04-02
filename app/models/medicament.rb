@@ -1,0 +1,3 @@
+class Medicament < Event
+
+end

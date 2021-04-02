@@ -1,0 +1,3 @@
+class Maladie < Event
+
+end

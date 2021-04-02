@@ -1,0 +1,3 @@
+class Dodo < Event
+
+end
