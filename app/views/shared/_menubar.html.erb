@@ -1,7 +1,13 @@
-<div class="menubar">
-  <i class="fas fa-check-circle"></i>
-  <div class="button-circle mb-5">
-    <%= image_tag "add.png", class: "circle-plus" %>
-  </div>
+<% unless current_page?(controller: 'babies', action: 'index') %>
+  <div class="menubar">
+    <i class="fas fa-check-circle"></i>
+    <% unless params[:controller] == 'events' && params[:action] == 'new' %>
+      <%= link_to new_baby_event_path(@baby) do%>
+      <div class="button-circle mb-5">
+        <%= image_tag "add.png", class: "circle-plus" %>
+      </div>
+      <%end %>
+  <%end %>
   <i class="fas fa-cog"></i>
 </div>
+<% end%>
