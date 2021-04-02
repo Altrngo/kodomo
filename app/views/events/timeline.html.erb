@@ -6,11 +6,8 @@
     </div>
     <div class ="search-form">
       <%= form_tag event_timeline_baby_path, method: :get do %>
-      <%= text_field_tag :start_time,
-      params[:start_time],
-      class: "form-control",
-      placeholder: "Rechercher par date"%>
-      <%= submit_tag "Search", class: "btn btn-primary" %>
+      <%= date_field_tag :start_time, params[:start_time], class: "form-control", placeholder: "Rechercher par date"%>
+      <%= submit_tag "Recherche", class: "btn btn-primary" %>
       <% end %>
     </div>
     <div class="timeline">
@@ -19,7 +16,7 @@
         <div class="container-timeline left">
           <% if last_date.last != event.start_time %>
             <div class="date-timeline">
-              <h2><%= event.start_time.strftime("%m.%d.%Y") %></h2>
+              <h2><%= event.start_time.strftime("%d.%m.%Y") %></h2>
               <% last_date << event.start_time %>
             </div>
           <% else %>
@@ -28,7 +25,7 @@
           <div class="card event" id="card-timeline">
             <h2>Biberon</h2>
             <h2><%= event.type %></h2>
-            <p><%= event.start_time.strftime("%m.%d.%Y") %> à <%= event.start_time.strftime("%H:%M") %></p>
+            <p><%= event.start_time.strftime("%d.%m.%Y") %> à <%= event.start_time.strftime("%H:%M") %></p>
             <p><%= event.value_string %></p>
             <p><%= event.value_float.to_i %> ml</p>
             <p><%= event.comment %></p>
