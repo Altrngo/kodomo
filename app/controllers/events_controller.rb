@@ -25,6 +25,7 @@ class EventsController < ApplicationController
   def new 
     @baby = Baby.find(params[:baby_id])
     @event = Event.new
+    @event.type = params["type"]
     # raise
   end
 
