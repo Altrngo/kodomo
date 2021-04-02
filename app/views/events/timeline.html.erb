@@ -26,8 +26,12 @@
             <div class="card event" id="card-timeline">
               <h2 class="text-timeline"><%= event.type %></h2>
               <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
-              <p class="text-timeline"><%= event.value_string %></p>
-              <p class="text-timeline"><%= event.value_float.to_i %> ml</p>
+              
+              <% if event.value_string != nil %>
+                <p class="text-timeline"><%= event.value_string %></p>
+              <% else %>
+                <p class="text-timeline"><%= event.value_float.to_i %> ml</p>
+              <% end %>
             </div>
           <%# <% end %>
         </div>
