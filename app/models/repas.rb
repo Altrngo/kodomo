@@ -1,0 +1,3 @@
+class Repas < Event
+
+end

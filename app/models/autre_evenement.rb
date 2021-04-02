@@ -1,0 +1,3 @@
+class AutreEvenement < Event
+
+end
