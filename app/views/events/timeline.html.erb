@@ -22,15 +22,15 @@
           <% else %>
             <%= "" %>
           <% end %>
-          <%= link_to baby_event_path(@baby) do %>
+          <%# <%= link_to baby_event_path(@baby) do %>
             <div class="card event" id="card-timeline">
               <h2 class="text-timeline">Biberon</h2>
               <h2 class="text-timeline"><%= event.type %></h2>
-              <p class="text-timeline"><%= event.start_time.strftime("%Hh%M") %></p>
+              <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
               <p class="text-timeline"><%= event.value_string %></p>
               <p class="text-timeline"><%= event.value_float.to_i %> ml</p>
             </div>
-          <% end %>
+          <%# <% end %>
         </div>
       <% end %>
     </div>

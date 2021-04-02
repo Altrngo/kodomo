@@ -12,7 +12,6 @@
   margin-bottom: 10px;
 }
 
-
 /* The actual timeline (the vertical ruler) */
 .timeline {
   position: relative;
@@ -31,6 +30,10 @@
 
 .text-timeline {
   margin-bottom: 0;
+}
+
+#time {
+  font-weight: bold;
 }
 
 /* The actual timeline (the vertical ruler) */
