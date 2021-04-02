@@ -8,7 +8,6 @@ Rails.application.routes.draw do
     resources :events, only: [:choose_type, :new, :create] do
       collection do
         get 'choose_type'
-
         # get 'new/baby_bottles', to: 'baby_bottles#new', as: 'new_baby_bottle'
       end
     end
