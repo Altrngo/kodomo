@@ -17,6 +17,10 @@ class EventsController < ApplicationController
     @events = Event.where(baby: @baby)
   end
 
+  def show
+    @event = Event.find(params[:id])
+  end
+
   def new
     @baby = Baby.find(params[:baby_id])
     @event = Event.new
@@ -29,6 +33,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.baby = @baby
     @event.user = current_user
+    raise
     if @event.save
       redirect_to babies_path(@baby)
     else
