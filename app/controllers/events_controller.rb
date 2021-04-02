@@ -13,7 +13,8 @@ class EventsController < ApplicationController
 
   def timeline
     @baby = Baby.find(params[:id])
-    @events = Event.where(baby: @baby).sort_by { |event| event.start_time}.reverse
+    @events = Event.where(baby: @baby).sort_by { |event| event.start_time}.reverse || Event.where("start_time ILIKE ?", "%#{params[:start_time]}%")
+    @events = Event.where("start_time ILIKE ?", "%#{params[:start_time]}%")
   end
 
   def new
