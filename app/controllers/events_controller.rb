@@ -7,8 +7,8 @@ class EventsController < ApplicationController
     # @other_event_types = ["OtherEvent"]
 
     @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
-    @health_types = ["Bobo", "Vaccin", "Témperature", "Médicament", "Maladie"]
-    @other_event_types = ["Autre événement"]
+    @health_types = ["Bobo", "Vaccin", "Temperature", "Medicament", "Maladie", "Taille", "Poids"]
+    @other_event_types = ["Autre evenement"]
   end
 
   def timeline
@@ -33,7 +33,7 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.baby = @baby
     @event.user = current_user
-    raise
+    # raise
     if @event.save
       redirect_to babies_path(@baby)
     else
