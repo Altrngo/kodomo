@@ -16,9 +16,9 @@ class EventsController < ApplicationController
     # @events = Event.where(baby: @baby).sort_by { |event| event.start_time}.reverse
     if params[:start_time].present?
       start_time = Date.parse(params[:start_time])
-      @events = Event.where(baby: @baby).where(start_time: start_time.beginning_of_day..start_time.end_of_day).order(:start_time)
+      @events = Event.where(baby: @baby).where(start_time: start_time.beginning_of_day..start_time.end_of_day).order(:start_time).reverse
     else
-      @events = Event.where(baby: @baby).order(:start_time)
+      @events = Event.where(baby: @baby).order(:start_time).reverse
     end
   end
 

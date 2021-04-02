@@ -29,6 +29,10 @@
   margin-right: 0;
 }
 
+.text-timeline {
+  margin-bottom: 0;
+}
+
 /* The actual timeline (the vertical ruler) */
 .timeline::after {
   content: '';
