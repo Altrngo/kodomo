@@ -1,8 +1,8 @@
 <% unless current_page?(controller: 'babies', action: 'index') %>
   <div class="menubar">
     <i class="fas fa-check-circle"></i>
-    <% unless params[:controller] == 'events' && params[:action] == 'new' %>
-      <%= link_to new_baby_event_path(@baby) do%>
+    <% if @baby %>
+      <%= link_to choose_type_baby_events_path(@baby) do%>
       <div class="button-circle mb-5">
         <%= image_tag "add.png", class: "circle-plus" %>
       </div>
