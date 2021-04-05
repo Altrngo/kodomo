@@ -11,7 +11,6 @@
       <% end %>
     </div>
     <div class="timeline">
-      <% last_date = [] %>
       <% @events.each do |event| %>
         <div class="container-timeline left">
           <% if last_date.last != event.start_time %>
@@ -26,7 +25,6 @@
             <div class="card event" id="card-timeline">
               <h2 class="text-timeline"><%= event.type %></h2>
               <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
-              
               <% if event.value_string != nil %>
                 <p class="text-timeline"><%= event.value_string %></p>
               <% else %>
