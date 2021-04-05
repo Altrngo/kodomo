@@ -16,13 +16,13 @@
     <div class="menuContent">
       <ul>
         <li>
-          <a href="#">Accueil</a>
+          <%= link_to "Accueil", root_path%>
         </li>
         <li>
-          <a href="#">Choix enfant</a>
+          <%= link_to "Choix enfant", babies_path%>
         </li>
         <li>
-          <a href="#">Evenements</a>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
         </li>
       </ul>
     </div>
