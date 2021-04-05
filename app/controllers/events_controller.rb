@@ -13,7 +13,6 @@ class EventsController < ApplicationController
 
   def timeline
     @baby = Baby.find(params[:id])
-    # @events = Event.where(baby: @baby).sort_by { |event| event.start_time}.reverse
     if params[:start_time].present?
       start_time = Date.parse(params[:start_time])
       @events = Event.where(baby: @baby).where(start_time: start_time.beginning_of_day..start_time.end_of_day).order(:start_time).reverse
@@ -26,7 +25,7 @@ class EventsController < ApplicationController
     @event = Event.find(params[:id])
   end
 
-  def new 
+  def new
     @baby = Baby.find(params[:baby_id])
     @event = Event.new
     @event.type = params["type"]
@@ -40,7 +39,7 @@ class EventsController < ApplicationController
     @event.user = current_user
     # raise
     if @event.save
-      redirect_to babies_path(@baby)
+      redirect_to baby_path(@baby)
     else
       render :new
     end

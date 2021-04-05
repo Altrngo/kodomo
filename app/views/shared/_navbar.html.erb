@@ -1,5 +1,31 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to :back, class: "navbar-brand" do %>
+  <div>
+    <%= link_to :back, class: "navbar-brand" do %>
     <i class="fas fa-chevron-left"></i>
   <% end %>
+</div>
+<div id="menuArea">
+  <input type="checkbox" id="menuToggle"></input>
+
+  <label for="menuToggle" class="menuOpen">
+    <div class="open"></div>
+  </label>
+
+  <div class="menu menuEffects">
+    <label for="menuToggle"></label>
+    <div class="menuContent">
+      <ul>
+        <li>
+          <%= link_to "Accueil", root_path%>
+        </li>
+        <li>
+          <%= link_to "Choix enfant", babies_path%>
+        </li>
+        <li>
+          <%= link_to "Déconnexion", destroy_user_session_path, method: :delete %>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
 </div>
