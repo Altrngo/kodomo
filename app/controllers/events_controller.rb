@@ -33,6 +33,7 @@ class EventsController < ApplicationController
   end
 
   def create
+    raise
     @baby = Baby.find(params[:baby_id])
     @event = Event.new(event_params)
     @event.baby = @baby

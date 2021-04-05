@@ -12,16 +12,14 @@
     </div>
     <div class="timeline">
       <% last_date = [] %>
-      <% @events.each do |event| %>
+      <% @events.each_with_index do |event, index| %>
         <div class="container-timeline left">
-          <% if last_date.last != event.start_time %>
-          <%# <% if last_date.last != event.where(start_time:(event.last.beginning_of_day..event.end_of_day)) %> 
+          <% if event.start_time.day != @events[index-1].start_time.day %>
             <div class="date-timeline">
               <h2><%= event.start_time.strftime("%d.%m.%Y") %></h2>
-              <% last_date << event.start_time %>
             </div>
           <% else %>
-            <%= " " %>
+            <%= "" %>
           <% end %>
           <%= link_to baby_event_path(@baby, event), class: "text-decoration" do %>
             <div class="card event" id="card-timeline">
