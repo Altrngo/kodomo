@@ -21,7 +21,7 @@
     <div class="container-page">
       <%= yield %>
     </div>
-    <% unless controller.controller_name == ("pages" || "devise" || "babies") %>
+    <% unless controller.controller_name == ("pages" || "devise" || "babies" || "events") %>
       <%= render 'shared/menubar' %>
     <% end %>
 
