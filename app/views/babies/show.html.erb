@@ -39,16 +39,18 @@
 
     </div>
   </div>
-  <div class="row">
-    <div class="col">
-      <div class="all-events card d-flex flex-row-reverse justify-content-around">
-        <div>
-          <i class="fas fa-calendar-alt"></i>
-        </div>
-        <div class="">
-          <p class="card-title-dark">Evenements passés</p>
+  <%= link_to event_timeline_baby_path(@baby), class: "text-decoration" do %>
+    <div class="row">
+      <div class="col">
+        <div class="all-events card d-flex flex-row-reverse justify-content-around">
+          <div>
+            <i class="fas fa-calendar-alt"></i>
+          </div>
+          <div class="">
+            <p class="card-title-dark">Evenements passés</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  <% end %>
 </div>
