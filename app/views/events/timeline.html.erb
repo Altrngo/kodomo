@@ -15,6 +15,7 @@
       <% @events.each do |event| %>
         <div class="container-timeline left">
           <% if last_date.last != event.start_time %>
+          <%# <% if last_date.last != event.where(start_time:(event.last.beginning_of_day..event.end_of_day)) %> 
             <div class="date-timeline">
               <h2><%= event.start_time.strftime("%d.%m.%Y") %></h2>
               <% last_date << event.start_time %>
