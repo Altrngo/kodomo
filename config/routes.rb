@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :babies, only: [:index, :show, :new, :create] do
     get 'timeline' => 'events#timeline', on: :member, as: 'event_timeline'
+    get 'details'
     resources :events, only: [:choose_type, :new, :create, :show] do
       collection do
         get 'choose_type'

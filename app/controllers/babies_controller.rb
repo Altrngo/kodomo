@@ -23,6 +23,10 @@ class BabiesController < ApplicationController
     @age = @baby.age
   end
 
+  def details
+    @baby = Baby.find(params[:baby_id])
+  end
+
   helper_method :age
 
   private
