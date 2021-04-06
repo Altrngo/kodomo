@@ -13,7 +13,7 @@
       <%= f.input :start_time, as: :datetime, :label => 'Date et Heure', html5: true %>
       <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true if @event.type == "Dodo" || @event.type == "Maladie" %>
       <%= f.input :comment, :label => 'Commentaire' %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :photo, as: :file, if @event.type == "Evenement"  %>
       <%= f.input :type, as: :hidden %>
       <%= f.submit %>
     <% end %>
