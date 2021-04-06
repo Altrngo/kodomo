@@ -1,3 +1,1 @@
-document.querySelector("carouselExampleIndicators").addEventListener{
-  
-}
+

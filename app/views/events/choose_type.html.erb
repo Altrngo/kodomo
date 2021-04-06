@@ -16,14 +16,15 @@
     <% end %>
   <% end %>
 </div>
-  <div class="d-flex flex-row justify-content-around mt-5">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active d-flex flex-column-reverse"><h1>Quotidien</h1></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1" class="d-flex flex-column-reverse"><h1>Santé</h1></li>
-    <!--  <li data-target="#carouselExampleIndicators" data-slide-to="2" class="d-flex flex-column-reverse"><h1>Autre</h1></li> -->
-    </ol>
-  </div>
+
   <div id="carouselExampleIndicators" class="carousel slide" data-interval="false">
+    <div class="d-flex flex-row mt-5">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active d-flex flex-column-reverse slide-it"><h1>Quotidien</h1></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1" class="d-flex flex-column-reverse slide-it"><h1>Santé</h1></li>
+      <!--  <li data-target="#carouselExampleIndicators" data-slide-to="2" class="d-flex flex-column-reverse"><h1>Autre</h1></li> -->
+      </ol>
+    </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
         <% @daily_types.each do |type| %>
