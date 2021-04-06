@@ -2,7 +2,7 @@
   <div class="container">
     <div class="card" id="card-show">
       <div class="event-icon">
-        <%= image_tag @event.type, height: 60, width: 60 %>
+        <%= image_tag "#{@event.type}.png", height: 60, width: 60 %>
       </div>
       <div class="container-text-timeline">
         <h1><%= @event.type %></h1>
