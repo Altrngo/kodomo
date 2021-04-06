@@ -1,6 +1,10 @@
 .custom-select {
   position: relative;
-  font-family: Arial;
+  border: 0px;
+  padding: 0px;
+  font-size: 18px;
+  font-weight: 300;
+  color: $font-color;
 }
 
 .custom-select select {
