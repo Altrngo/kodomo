@@ -22,12 +22,14 @@
       </div>
     </div>
   </div>
-  <%= link_to baby_event_path(@baby, @event_last), class: "text-decoration" do %>
+  
     <div class="row">
       <div class="col-8">
         <div class="card last-event bg-foot mb-3 d-flex flex-column align-items-end ">
           <div class="title-child">
+          <%= link_to baby_event_path(@baby, @event_last), class: "text-decoration" do %>
             <p>Dernier evenement</p>
+          <% end %>
           </div>
         </div>
       </div>
@@ -38,7 +40,7 @@
         </div>
       </div>
     </div>
-  <% end %>
+  
   <%= link_to event_timeline_baby_path(@baby), class: "text-decoration" do %>
     <div class="row">
       <div class="col">
