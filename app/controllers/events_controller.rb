@@ -45,6 +45,14 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @event.update(event_params)
+    redirect_to event_timeline_baby_path(@event.baby)
+  end
+
   def destroy
     @event = Event.find(params[:id])
     @event.destroy
