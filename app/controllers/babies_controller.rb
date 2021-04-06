@@ -26,16 +26,20 @@ class BabiesController < ApplicationController
   def details
     @baby = Baby.find(params[:baby_id])
     if Event.where(type: "Poids") != nil
-     @weight = Event.where(type: "Poids").last.value_float
-   elsif
-      @weight = Baby.find(params[:baby_id]).weight
-   end
+      @weight = Event.where(type: "Poids").last.value_float
+    elsif @weight = Baby.find(params[:baby_id]).weight
+    end
 
-   if Event.where(type: "Taille") != nil
-    @height = Event.where(type: "Taille").last.value_float
-  elsif
-    @height = Baby.find(params[:baby_id]).height
-  end
+    if Event.where(type: "Taille") != nil
+      @height = Event.where(type: "Taille").last.value_float
+    elsif @height = Baby.find(params[:baby_id]).height
+
+      duration = []
+      @baby.events.where(type: "Dodo") do |event|
+        duration << event.calculate_duration if event.start_time.day == Date.today - 1
+        @sleep = duration.sum
+      end
+    end
   end
 
   helper_method :age
