@@ -5,6 +5,7 @@
   </div>
   <div class="row">
     <div class="col">
+      <%= link_to baby_details_path(@baby) do%>
       <div class="card baby-profile-card mb-3" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url @baby.photo.key %>') ">
         <div class="d-flex justify-content-between">
           <div class="last-eat d-flex align-items-center">
@@ -20,6 +21,7 @@
           <p>Fiche enfant</p>
         </div>
       </div>
+      <% end %>
     </div>
   </div>
   <div class="row">
