@@ -12,7 +12,7 @@ Rails.application.routes.draw do
       end
     end
   end
-
+  resources :events, only: [:destroy]
   # get '/babies/:id/events/choose_type', to: 'events#choose_type', as: 'event_type'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
