@@ -22,6 +22,9 @@
           <% end %>
           <%= link_to baby_event_path(@baby, event), class: "text-decoration" do %>
             <div class="card event" id="card-timeline">
+              <div>
+                <div class="event-icon"><%= image_tag event.type, height: 40, width: 40 %></div>
+              </div>
               <h2 class="text-timeline"><%= event.type %></h2>
               <% unless event.type == "Dodo" %>
                 <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
