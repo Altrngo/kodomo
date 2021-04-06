@@ -1,0 +1,25 @@
+.carousel-indicators {
+  position: relative;
+  z-index: 0;
+  justify-content: space-around;
+      width: 100%;
+
+  li {
+    height: 7px;
+    width: 7px;
+    border-radius: 50%;
+    background: gray;
+    box-sizing: border-box;
+    border-top: 0;
+    border-bottom: 0;
+    text-indent: 0;
+    align-items: center;
+    h1{
+      font-size: 24px;
+    }
+  }
+
+  ol {
+
+  }
+}
