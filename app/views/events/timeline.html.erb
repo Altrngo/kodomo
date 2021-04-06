@@ -27,7 +27,7 @@
               </div>
               <div class="container-text-timeline">
                 <h2 class="text-timeline"><%= event.type %></h2>
-                <% unless event.type == "Dodo" %>
+                <% unless event.type == "Dodo" ||event.type == "Evenement"  %>
                   <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
                 <% end %>
                 <% if event.value_string != nil %>
@@ -43,6 +43,9 @@
                 <% elsif event.type == "Dodo" %>
                   <p class="text-timeline" id="time"> De <%= event.start_time.strftime("%Hh%M") %> à <%= event.end_time.strftime("%Hh%M") %>
                   <p class="text-timeline">Durée <%= event.calculate_duration %></p>
+                <% elsif event.type == "Evenement" %>
+                  <div><%= cl_image_tag event.photo.key, height: 200, width: 350, crop: :fill, class: "card-type-evenement" %></div>
+                  <p class="text-timeline"><%= event.description %> °C</p>
                 <% end %>
               </div>
             </div>
