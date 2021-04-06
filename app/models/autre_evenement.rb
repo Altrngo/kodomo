@@ -1,3 +1,0 @@
-class AutreEvenement < Event
-
-end

@@ -1,0 +1,3 @@
+class Evenement < Event
+
+end
