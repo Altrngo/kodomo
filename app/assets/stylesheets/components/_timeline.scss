@@ -32,6 +32,11 @@
   margin-bottom: 0;
 }
 
+.container-text-timeline {
+  display: flex;
+  flex-direction: column;
+}
+
 #time {
   font-weight: bold;
 }
