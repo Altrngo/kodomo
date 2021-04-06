@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
     @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
     @health_types = ["Bobo", "Vaccin", "Temperature", "Medicament", "Maladie", "Taille", "Poids"]
-    @other_event_types = ["Autre evenement"]
+    @other_event_types = ["Evenement"]
   end
 
   def timeline
