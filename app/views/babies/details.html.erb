@@ -2,7 +2,7 @@
   <div>
     <h1><%= @baby.name %></h1>
     <div >
-      <select class="custom-select" style="width:200px;">
+      <select class="custom-select mb-3" style="width:200px;">
         <option value="0">Hier</option>
         <option value="1">Semaine dernière</option>
         <option value="2">Mois dernier</option>
@@ -10,46 +10,55 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row">
+<div class="container stats-container">
+  <div class="row mb-3">
     <div class="col-7">
-      <div class="card">
+      <div class="card d-flex flex-row align-items-center justify-content-center">
         <div>
           <h1>150h</h1>
           <p>de sommeil</p>
         </div>
+      <img src="<%= image_path 'Dodo.png' %>" alt="dodo">
       </div>
     </div>
     <div class="col">
-      <div class="card">
-        <div>
+      <div class="card d-flex align-items-center">
+        <div class="d-flex flex-column justify-content-center align-items-center">
           <h1>15</h1>
           <p>couches</p>
         </div>
+        <img class="bg-icon" src="<%= image_path 'Couche.png' %>" alt="lait">
       </div>
     </div>
   </div>
-  <div class="row">
+  <div class="row mb-3">
     <div class="col">
-      <div class="card">
+      <div class="card d-flex flex-row align-items-center">
         <div>
           <h1>50 litres</h1>
           <p>de lait ingurgité</p>
         </div>
+        <img id="bibi" src="<%= image_path 'Biberon.png' %>" alt="lait">
       </div>
     </div>
   </div>
   <div class="row">
     <div class="col-5">
-      <div class="card">
+      <div class="card d-flex align-items-center"">
+        <div class="d-flex flex-column justify-content-center align-items-center">
         <h1>37kg</h1>
         <p>Poids actuel</p>
+        </div>
+        <img class="bg-icon" src="<%= image_path 'Poids.png' %>" alt="poids">
       </div>
     </div>
     <div class="col">
-      <div class="card">
+      <div class="card d-flex align-items-center"">
+        <div class="d-flex flex-column justify-content-center align-items-center">
         <h1>180cm</h1>
         <p>Taille actuelle</p>
+        </div>
+        <img class="bg-icon" src="<%= image_path 'Taille.png' %>" alt="poids">
       </div>
     </div>
   </div>
