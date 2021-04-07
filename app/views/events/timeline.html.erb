@@ -11,26 +11,47 @@
       <% end %>
     </div>
     <div class="timeline">
-      <% last_date = [] %>
       <% @events.each_with_index do |event, index| %>
         <div class="container-timeline left">
           <% if event.start_time.day != @events[index-1].start_time.day %>
             <div class="date-timeline">
-              <h2><%= event.start_time.strftime("%d.%m.%Y") %></h2>
+              <h2><%= event.start_time.strftime("%d.%m.%Y")%></h2>
             </div>
           <% else %>
             <%= "" %>
           <% end %>
           <%= link_to baby_event_path(@baby, event), class: "text-decoration" do %>
-            <div class="card event" id="card-timeline">
-              <h2 class="text-timeline"><%= event.type %></h2>
-              <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
-              <% if event.value_string != nil %>
-                <p class="text-timeline"><%= event.value_string %></p>
-              <% else %>
-                <p class="text-timeline"><%= event.value_float.to_i %> ml</p>
-              <% end %>
-            </div>
+            <% if event.type != "Evenement" %>
+              <div class="card event" id="card-timeline">
+                <div class="event-icon">
+                  <%= image_tag event.type, height: 40, width: 40 %>
+                </div>
+                <div class="container-text-timeline">
+                  <h2 class="text-timeline"><%= event.type %></h2>
+                  <% unless event.type == "Dodo" %>
+                    <p class="text-timeline" id="time"><%= event.start_time.strftime("%Hh%M") %></p>
+                  <% end %>
+                  <% if event.value_string != nil %>
+                    <p class="text-timeline"><%= event.value_string %></p>
+                  <% elsif event.type == "Biberon" %>
+                    <p class="text-timeline"><%= event.value_float.to_i %> ml</p>
+                  <% elsif event.type == "Taille" %>
+                    <p class="text-timeline"><%= event.value_float.to_i %> cm</p>
+                  <% elsif event.type == "Poids" %>
+                    <p class="text-timeline"><%= event.value_float %> kg</p>
+                  <% elsif event.type == "Temperature" %>
+                    <p class="text-timeline"><%= event.value_float %> °C</p>
+                  <% elsif event.type == "Dodo" %>
+                    <p class="text-timeline" id="time"> De <%= event.start_time.strftime("%Hh%M") %> à <%= event.end_time.strftime("%Hh%M") %>
+                    <p class="text-timeline">Durée <%= event.calculate_duration %></p>
+                  <% end %>
+                </div>
+              </div>
+            <% else %>
+              <div class="card event baby-profile-card" id="card-type-evenement" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url @baby.photo.key %>') ">
+                <h2 id="card-type-evenement-text"><%= event.value_string%></h2>
+              </div>
+            <% end %>
           <% end %>
         </div>
       <% end %>

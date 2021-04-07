@@ -1,26 +1,41 @@
 <body>
   <div class="container">
-    <div class="card">
-      <h1><%= @event.type %></h1>
-      <h2> du <%= @event.start_time.strftime("%d.%m.%Y") %></h2>
-      <% unless @event.type == "Dodo" %>
-        <p class="text-timeline" id="time"><%= @event.start_time.strftime("%Hh%M") %></p>
+    <div class="card" id="card-show">
+      <div class="event-icon">
+        <%= image_tag "#{@event.type}.png", height: 60, width: 60 %>
+      </div>
+      <div class="container-text-timeline">
+        <h1><%= @event.type %></h1>
+        <h2> du <%= @event.start_time.strftime("%d.%m.%Y") %></h2>
+        <% unless @event.type == "Dodo" %>
+          <p class="text-timeline" id="time"><%= @event.start_time.strftime("%Hh%M") %></p>
         <% end %>
         <% if @event.value_string != nil %>
-        <p class="text-timeline"><%= @event.value_string %></p>
+          <p class="text-timeline"><%= @event.value_string %></p>
         <% elsif @event.type == "Biberon" %>
-        <p class="text-timeline"><%= @event.value_float.to_i %> ml</p>
+          <p class="text-timeline"><%= @event.value_float.to_i %> ml</p>
         <% elsif @event.type == "Taille" %>
-        <p class="text-timeline"><%= @event.value_float.to_i %> cm</p>
+          <p class="text-timeline"><%= @event.value_float.to_i %> cm</p>
         <% elsif @event.type == "Poids" %>
-        <p class="text-timeline"><%= @event.value_float %> kg</p>
+          <p class="text-timeline"><%= @event.value_float %> kg</p>
         <% elsif @event.type == "Temperature" %>
-        <p class="text-timeline"><%= @event.value_float %> °C</p>
-      <% elsif @event.type == "Dodo" %>
-        <p class="text-timeline" id="time"> De <%= @event.start_time.strftime("%Hh%M") %> à <%= @event.end_time.strftime("%Hh%M") %>
-        <p class="text-timeline">Durée <%= @event.calculate_duration %></p>
-      <% end %>
-      <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
+          <p class="text-timeline"><%= @event.value_float %> °C</p>
+        <% elsif @event.type == "Dodo" %>
+          <p class="text-timeline" id="time"> De <%= @event.start_time.strftime("%Hh%M") %> à <%= @event.end_time.strftime("%Hh%M") %>
+          <p class="text-timeline">Durée <%= @event.calculate_duration %></p>
+        <% end %>
+        <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
+      <div>
+      <%= link_to edit_event_path(@event) do %>
+        <i class="fas fa-pencil-alt"></i>
+        <% end %>
+      </div>
+      <div>
+        <%= link_to event_path(@event), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer cet événement #{@event.type}? " } do %>
+        <i class="fas fa-trash-alt"></i>
+        <% end %>
+      </div>
+      </div>
     </div>
   </div>
 </body>

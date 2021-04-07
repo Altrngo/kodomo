@@ -9,9 +9,9 @@
     <% @other_event_types.each do |type| %>
       <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
       <div class="card baby d-flex align-items-center">
-        <div class="event-icon"><%= image_tag "Autre_evenement", height: 40, width: 40 %></div>
+        <div class="event-icon"><%= image_tag "Evenement.png", height: 40, width: 40 %></div>
         <div>
-          <h2><%= type %></h2>
+          <h2><%= type %> Perso</h2>
 
         </div>
       </div>
@@ -32,7 +32,7 @@
         <% @daily_types.each do |type| %>
           <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
           <div class="card baby d-flex align-items-center">
-            <div class="event-icon"><%= image_tag type, height: 40, width: 40 %></div>
+            <div class="event-icon"><%= image_tag "#{type}.png", height: 40, width: 40 %></div>
             <div>
               <h2><%= type %></h2>
             </div>
@@ -44,7 +44,7 @@
       <% @health_types.each do |type| %>
         <%= link_to new_baby_event_path(type:type), class: "text-decoration" do %>
         <div class="card baby d-flex align-items-center">
-          <div class="event-icon"><%= image_tag type, height: 40, width: 40 %></div>
+          <div class="event-icon"><%= image_tag "#{type}.png", height: 40, width: 40 %></div>
           <div>
             <h2><%= type %></h2>
           </div>

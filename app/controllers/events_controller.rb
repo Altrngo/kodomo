@@ -8,7 +8,7 @@ class EventsController < ApplicationController
 
     @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
     @health_types = ["Bobo", "Vaccin", "Temperature", "Medicament", "Maladie", "Taille", "Poids"]
-    @other_event_types = ["Autre evenement"]
+    @other_event_types = ["Evenement"]
   end
 
   def timeline
@@ -45,10 +45,25 @@ class EventsController < ApplicationController
     end
   end
 
+  def edit
+    @event = Event.find(params[:id])
+  end
+
+  def update
+    @event = Event.find(params[:id])
+    @event.update!(event_params)
+    redirect_to event_timeline_baby_path(@event.baby)
+  end
+
+  def destroy
+    @event = Event.find(params[:id])
+    @event.destroy
+    redirect_to event_timeline_baby_path(@event.baby)
+  end
   private
 
   def event_params
-    params.require(:event).permit(:type, :start_time, :end_time, :value_float, :value_string, :comment, :validated, :baby_id, :user_id)
+    params.require(:event).permit(:type, :start_time, :end_time, :value_float, :value_string, :comment, :validated, :baby_id, :user_id, :photo)
   end
 
 end

@@ -1,9 +1,6 @@
-
-<body>
-  <div class="container">
-    <h1><%= @event.type %></h1>
-    <h2>Nouvel Evénement</h2>
-    <%= simple_form_for [@baby, @event] do |f| %>
+    <%= simple_form_for @event, as: :event, url: event_path do |f| %>
+    <%# We need "as: :event" otherwise simpleform will create the params of the event_type (Temperature or Dodo or Biberon etc..) and not params of Event due to the Single Table Inheritance %>
+    <%# we need to force the path with "url: event_path" otherwise simpleform will try to send the params to dodo_path or biberon_path that does not exist since these types of event inherit from event model %>
       <%= f.input :value_float, :label => 'Quantité (ml)' if @event.type == "Biberon" %>
       <%= f.input :value_float, :label => 'Température' if @event.type == "Temperature" %>
       <%= f.input :value_float, :label => 'Taille (cm)' if @event.type == "Taille" %>
@@ -13,9 +10,6 @@
       <%= f.input :start_time, as: :datetime, :label => 'Date et Heure', html5: true %>
       <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true if @event.type == "Dodo" || @event.type == "Maladie" %>
       <%= f.input :comment, :label => 'Commentaire' %>
-      <%= f.input :photo, as: :file if @event.type == "Evenement" || @event.type == "Bobo" || @event.type == "Medicament" || @event.type == "Maladie" || @event.type =="Repas" %>
-      <%= f.input :type, as: :hidden %> 
+      <%= f.input :type, as: :hidden %>
       <%= f.submit %>
     <% end %>
-  </div>
-</body>
