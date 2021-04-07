@@ -8,7 +8,7 @@ class BabiesController < ApplicationController
     @baby = Baby.new
   end
 
-   def create
+  def create
     @baby = Baby.new(baby_params)
     if @baby.save
       BabyUser.create(baby_id: @baby.id, user_id: current_user.id)
@@ -24,11 +24,81 @@ class BabiesController < ApplicationController
     @event_last = Event.order(:start_time).last
   end
 
+  def details
+    @baby = Baby.find(params[:baby_id])
+    details_health
+    details_sleep(params[:date_filter])
+    details_diapers(params[:date_filter])
+    details_milk(params[:date_filter])
+  end
+
+  def details_health
+    if Event.where(type: "Poids") != nil
+      @weight = Event.where(type: "Poids").last.value_float
+    elsif @weight = Baby.find(params[:baby_id]).weight
+    end
+
+    if Event.where(type: "Taille") != nil
+      @height = Event.where(type: "Taille").last.value_float
+    elsif @height = Baby.find(params[:baby_id]).height
+    end
+  end
+
+  def details_sleep(date_filter)
+    if date_filter == "Mois dernier"
+      number_of_days = 30
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 1
+    end
+    duration = 0
+    @babyborn = @baby.events.where(type: "Dodo").where("start_time > ?", number_of_days.days.ago)
+    @babyborn.each do |event|
+      entry = event.calculate_sleep #if event.start_time.day == Date.today.day - number_of_days
+      duration += entry
+    end
+    @sleep = duration
+  end
+
+  def details_diapers(date_filter)
+    if date_filter == "Mois dernier"
+      number_of_days = 30
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 1
+    end
+    sum = 0
+    @babydiaper = @baby.events.where(type: "Couche").where("start_time > ?", number_of_days.days.ago)
+    @babydiaper.each do |event|
+        sum += 1
+      end
+    @diaper = sum
+  end
+
+  def details_milk(date_filter)
+    if date_filter == "Mois dernier"
+      number_of_days = 30
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 1
+    end
+    quantity = 0
+    @babymilk = @baby.events.where(type: "Biberon").where("start_time > ?", number_of_days.days.ago)
+    @babymilk.each do |event|
+      entry = event.value_float
+      quantity += entry
+    end
+    @milk = quantity
+  end
+
   helper_method :age
 
   private
 
   def baby_params
-  params.require(:baby).permit(:name, :birth_date, :weight, :height, :gender, :photo)
-end
+    params.require(:baby).permit(:name, :birth_date, :weight, :height, :gender, :photo)
+  end
 end

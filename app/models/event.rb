@@ -22,6 +22,7 @@ class Event < ApplicationRecord
     durationLabel.join separator
     end
 
+
     def disease_duration
       start_time = self.start_time
       current_time = Date.today
@@ -40,4 +41,8 @@ class Event < ApplicationRecord
         return "#{absolute[:days]} jours et #{absolute[:hours]} heures"
       end
     end
+
+  def calculate_sleep
+    ((self.end_time - self.start_time)/60).to_f.round(1)
+  end
 end
