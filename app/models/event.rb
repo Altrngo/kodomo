@@ -21,4 +21,29 @@ class Event < ApplicationRecord
     durationLabel << "#{seconds}s" if seconds > 0
     durationLabel.join separator
     end
+
+    def disease_duration
+      start_time = self.start_time
+      current_time = Date.today
+      end_time = self.end_time
+      absolute = TimeDifference.between(start_time, end_time).in_general
+      absolute_current = TimeDifference.between(start_time, current_time).in_general
+      if end_time != nil
+        if absolute[:years] > 2
+          return "#{absolute[:years]} ans et #{absolute[:months]} mois"
+        elsif absolute[:months] > 1
+          return "#{absolute[:months]} mois et #{absolute[:days]} jours"
+        else
+          return "#{absolute[:days]} jours et #{absolute[:hours]} heures"
+        end
+      else
+        if absolute_current[:years] > 2
+          return "#{absolute_current[:years]} ans et #{absolute_current[:months]} mois"
+        elsif absolute_current[:months] > 1
+          return "#{absolute_current[:months]} mois et #{absolute_current[:days]} jours"
+        else
+          return "#{absolute_current[:days]} jours et #{absolute_current[:hours]} heures"
+        end
+      end
+    end
 end

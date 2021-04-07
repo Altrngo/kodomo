@@ -6,8 +6,8 @@
           <%= image_tag "#{@event.type}.png", height: 60, width: 60 %>
         </div>
         <div>
-        <h1><%= @event.type %></h1>
-        <h2> du <%= @event.start_time.strftime("%d.%m.%Y") %></h2>
+          <h1><%= @event.type %></h1>
+          <h2> du <%= @event.start_time.strftime("%d.%m.%Y") %></h2>
         </div>
       </div>
       <div Class="event-show-card-content">
@@ -29,13 +29,18 @@
           <p class="text-timeline" id="time"> De <%= @event.start_time.strftime("%Hh%M") %> à
             <%= @event.end_time.strftime("%Hh%M") %>
             <p class="text-timeline">Durée <%= @event.calculate_duration %></p>
+          <% end %>
+          <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
+          <% if @event.type == "Evenement" || @event.type == "Maladie" || @event.type == "Repas" || @event.type == "Bobo" || @event.type == "Medicament" || @event.type == "Taille"  %>
+            <% if @event.photo != nil %>
+              <div class="show-photo"><%= cl_image_tag @event.photo.key, height: 280, width: 280, crop: :fill %></div>
             <% end %>
-            <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
+          <% end %>
         </div>
-      <div class="event-show-card-bottom">
+        <div class="event-show-card-bottom">
           <div>
             <%= link_to edit_event_path(@event) do %>
-              <i class="fas fa-pencil-alt"></i>
+            <i class="fas fa-pencil-alt"></i>
             <% end %>
           </div>
           <div>
@@ -43,7 +48,7 @@
             <i class="fas fa-trash-alt"></i>
             <% end %>
           </div>
-      </div>
+        </div>
       </div>
     </div>
   </div>
