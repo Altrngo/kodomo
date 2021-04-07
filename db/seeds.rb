@@ -20,10 +20,10 @@ benjamin = User.create!(email: "benjamin@benjamin.ch", password: "123456")
 puts "Created user benjamin "
 
 puts 'Creating Babies...'
-file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617095840/Baby_1_umrtjv.jpg')
-mario = Baby.create!(name:"Mario",birth_date: 20210328, weight: 2.4, height: 53, gender: "Garçon")
-mario.photo.attach(io: file, filename: 'baby_1.jpg', content_type: 'image/jpg')
-puts "Created Baby Mario"
+file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617790404/Babies/L%C3%A9o_Baby_born_kohosg.jpg')
+leo = Baby.create!(name:"Léo",birth_date: 20180222, weight: 2.4, height: 45, gender: "Garçon")
+leo.photo.attach(io: file, filename: 'baby_1.jpg', content_type: 'image/jpg')
+puts "Baby Leo is born"
 
 file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617095801/Baby_2_dkgv0v.jpg')
 lea = Baby.create!(name:"Léa",birth_date: 20210227, weight: 3.7, height: 48, gender: "Fille")
@@ -66,5 +66,3 @@ Event.create!(type: "Biberon", start_time: DateTime.new(2021,3,9,12,49,0), end_t
 puts "Created dodo"
 puts "Events Created... "
 puts 'Finished!'
-
-
