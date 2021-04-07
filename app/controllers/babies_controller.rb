@@ -11,7 +11,10 @@ class BabiesController < ApplicationController
   def create
     @baby = Baby.new(baby_params)
     if @baby.save
-      BabyUser.create(baby_id: @baby.id, user_id: current_user.id)
+      @baby_user =BabyUser.create(baby_id: @baby.id, user_id: current_user.id)
+      @event = Event.new(type: "Evenement", value_string: "Bienvenue à #{@baby.name}", start_time: @baby.birth_date, baby_id: @baby.id, user_id: current_user.id)
+      @event.photo = @baby.photo.blob
+      @event.save!
       redirect_to baby_path(@baby)
     else
       render :new

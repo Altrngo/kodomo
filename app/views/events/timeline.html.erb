@@ -46,11 +46,18 @@
                     <p class="text-timeline">Durée <%= event.calculate_duration %></p>
                   <% end %>
                 </div>
+                <% if @health_types.include?(event.type) %>
+                  <div class="health-icon">
+                    <i class="fas fa-notes-medical"></i>
+                  </div>
+                <% end %>
               </div>
             <% else %>
-              <div class="card event baby-profile-card" id="card-type-evenement" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url @baby.photo.key %>') ">
-                <h2 id="card-type-evenement-text"><%= event.value_string%></h2>
-              </div>
+              <% if event.photo.attached? %>
+                <div class="card event baby-profile-card" id="card-type-evenement" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url event.photo.key %>') ">
+                  <h2 class="card-type-evenement-text"><%= event.value_string%></h2>
+                </div>
+              <% end %>
             <% end %>
           <% end %>
         </div>
