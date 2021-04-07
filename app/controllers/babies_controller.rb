@@ -28,6 +28,7 @@ class BabiesController < ApplicationController
     details_health
     details_sleep
     details_diapers
+    details_milk
   end
 
   def details_health
@@ -53,15 +54,26 @@ class BabiesController < ApplicationController
     @sleep = duration
   end
 
-  def details_diaper
+  def details_diapers
     sum = 0
     @babydiaper = @baby.events.where(type: "Couche")
     @babydiaper.each do |event|
-      entry = 0
-      entry = event.calculate_duration if event.start_time.day == Date.today.day - 1
-      duration += entry.to_i
+      if event.start_time.day == Date.today.day - 1
+        sum += 1
+      end
     end
     @diaper = sum
+  end
+
+  def details_milk
+    quantity = 0
+    @babymilk = @baby.events.where(type: "Biberon")
+    @babymilk.each do |event|
+      entry = 0
+      entry = event.value_float if event.start_time.day == Date.today.day - 1
+      quantity += entry
+    end
+    @milk = quantity
   end
 
   helper_method :age
