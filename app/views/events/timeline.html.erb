@@ -46,6 +46,11 @@
                     <p class="text-timeline">Durée <%= event.calculate_duration %></p>
                   <% end %>
                 </div>
+                <% if @health_types.include?(event.type) %>
+                  <div class="health-icon">
+                    <i class="fas fa-notes-medical"></i>
+                  </div>
+                <% end %>
               </div>
             <% else %>
               <% if event.photo.attached? %>

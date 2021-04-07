@@ -12,6 +12,7 @@ class EventsController < ApplicationController
   end
 
   def timeline
+    @health_types = ["Bobo", "Vaccin", "Temperature", "Medicament", "Maladie", "Taille", "Poids"]
     @baby = Baby.find(params[:id])
     if params[:start_time].present?
       start_time = Date.parse(params[:start_time])
