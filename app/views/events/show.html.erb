@@ -32,7 +32,7 @@
           <% end %>
           <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
           <% if @event.type == "Evenement" || @event.type == "Maladie" || @event.type == "Repas" || @event.type == "Bobo" || @event.type == "Medicament" || @event.type == "Taille"  %>
-            <% if @event.photo != nil %>
+            <% if @event.photo.attached? %>
               <div class="show-photo"><%= cl_image_tag @event.photo.key, height: 280, width: 280, crop: :fill %></div>
             <% end %>
           <% end %>
