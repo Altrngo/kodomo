@@ -50,7 +50,6 @@ class EventsController < ApplicationController
   end
 
   def update
-    raise
     @event = Event.find(params[:id])
     @event.update!(event_params)
     redirect_to event_timeline_baby_path(@event.baby)
