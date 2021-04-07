@@ -2,8 +2,8 @@
   <div>
     <h1><%= @baby.name %></h1>
     <div >
-      <%= form_with url: "/search", method: :get do |form| %>
-        <%= form.select :city, ["Hier", "Semaine dernière", "Mois dernier"] %>
+      <%= form_with url: baby_details_path(@baby), method: :get do |form| %>
+        <%= form.select :date_filter, ["Choisir une période","Hier", "Semaine dernière", "Mois dernier"], {}, {onchange: "this.form.submit()"} %>
       <% end %>
     </div>
   </div>

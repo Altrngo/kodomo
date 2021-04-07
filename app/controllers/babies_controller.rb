@@ -26,9 +26,10 @@ class BabiesController < ApplicationController
   def details
     @baby = Baby.find(params[:baby_id])
     details_health
-    details_sleep
-    details_diapers
-    details_milk
+    details_sleep(params[:date_filter])
+    details_diapers(params[:date_filter])
+    details_milk(params[:date_filter])
+    #raise
   end
 
   def details_health
@@ -43,18 +44,25 @@ class BabiesController < ApplicationController
     end
   end
 
-  def details_sleep
+  def details_sleep(date_filter)
+    if date_filter == "Hier"
+      number_of_days = 1
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 30
+    end
     duration = 0
-    @babyborn = @baby.events.where(type: "Dodo")
+    #raise
+    @babyborn = @baby.events.where(type: "Dodo").where("start_time > ?", number_of_days.days.ago)
     @babyborn.each do |event|
-      entry = 0
-      entry = event.calculate_duration if event.start_time.day == Date.today.day - 1
-      duration += entry.to_i
+      entry = event.calculate_sleep #if event.start_time.day == Date.today.day - number_of_days
+      duration += entry
     end
     @sleep = duration
   end
 
-  def details_diapers
+  def details_diapers(date_filter)
     sum = 0
     @babydiaper = @baby.events.where(type: "Couche")
     @babydiaper.each do |event|
@@ -65,7 +73,7 @@ class BabiesController < ApplicationController
     @diaper = sum
   end
 
-  def details_milk
+  def details_milk(date_filter)
     quantity = 0
     @babymilk = @baby.events.where(type: "Biberon")
     @babymilk.each do |event|
