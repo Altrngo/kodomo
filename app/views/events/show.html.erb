@@ -12,11 +12,17 @@
       </div>
       <div Class="event-show-card-content">
         <div class="container-text-timeline">
-          <% unless @event.type == "Dodo" %>
+          <% if @event.type == "Maladie" %>
+            <p class="text-timeline" id="time"> à
+            <%= @event.end_time.present? ? @event.end_time.strftime("%d.%m.%Y") : "Maintenant" %>
+            <p class="text-timeline">Durée <%= @event.disease_duration %></p>
+            <hr>
+          <% end %>
+          <% unless @event.type == "Dodo" || @event.type == "Maladie" %>
           <p class="text-timeline" id="time"><%= @event.start_time.strftime("%Hh%M") %></p>
           <% end %>
           <% if @event.value_string != nil %>
-          <p class="text-timeline"><%= @event.value_string %></p>
+          <h2 class="text-timeline"><%= @event.value_string %></h2>
           <% elsif @event.type == "Biberon" %>
           <p class="text-timeline"><%= @event.value_float.to_i %> ml</p>
           <% elsif @event.type == "Taille" %>
