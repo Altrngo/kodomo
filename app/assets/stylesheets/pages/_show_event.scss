@@ -1,5 +1,34 @@
 #card-show {
   display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.event-show-card-top {
+  display: flex;
   flex-direction: row;
-  align-items: center;
+}
+
+.event-show-card-content {
+  margin-top: 10px;
+}
+
+.event-icon-show {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.event-show-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.fa-trash-alt {
+  font-size: 25px;
+}
+
+.fa-pencil-alt {
+  font-size: 25px;
 }
