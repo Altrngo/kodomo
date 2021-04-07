@@ -11,5 +11,5 @@
       <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true if @event.type == "Dodo" || @event.type == "Maladie" %>
       <%= f.input :comment, :label => 'Commentaire' %>
       <%= f.input :type, as: :hidden %>
-      <%= f.submit %>
+      <%= f.submit 'Modifier' %>
     <% end %>

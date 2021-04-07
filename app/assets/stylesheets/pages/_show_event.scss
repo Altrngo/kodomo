@@ -1,5 +1,47 @@
 #card-show {
   display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.event-show-card-top {
+  display: flex;
   flex-direction: row;
-  align-items: center;
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.event-show-card-content {
+  margin-top: 10px;
+  margin-left: 5px;
+}
+
+.event-icon-show {
+  margin-top: 5px;
+  margin-right: 20px;
+}
+
+.event-show-card-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-left: 5px;
+}
+
+.fa-trash-alt {
+  font-size: 25px;
+}
+
+.fa-pencil-alt {
+  font-size: 25px;
+}
+
+.show-photo {
+  border: 1px solid lightgrey;
+
+  margin-top: 30px;
+  align-self: center;
+  border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
 }
