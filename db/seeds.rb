@@ -1333,17 +1333,30 @@ puts 'Creating Events Evenement...'
 puts "Events Evenements created"
 
 puts 'Creating Events Vaccins...'
-  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,04,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
-  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,06,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
-  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,11,20,15,00,0), value_string: "ROR", validated: true, baby: leo, user: yoann)
-  Event.create!(type: "Vaccin",start_time: DateTime.new(2019,02,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13, ROR", validated: true, baby: leo, user: yoann)
-  Event.create!(type: "Vaccin",start_time: DateTime.new(2020,02,20,15,00,0), value_string: "MCV-ACWY", validated: true, baby: leo, user: yoann)
+  # Event.create!(type: "Vaccin",start_time: DateTime.new(2018,04,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
+  # Event.create!(type: "Vaccin",start_time: DateTime.new(2018,06,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
+  # Event.create!(type: "Vaccin",start_time: DateTime.new(2018,11,20,15,00,0), value_string: "ROR", validated: true, baby: leo, user: yoann)
+  # Event.create!(type: "Vaccin",start_time: DateTime.new(2019,02,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13, ROR", validated: true, baby: leo, user: yoann)
+  # Event.create!(type: "Vaccin",start_time: DateTime.new(2020,02,20,15,00,0), value_string: "MCV-ACWY", validated: true, baby: leo, user: yoann)
 puts "Events Vaccins created"
 
 puts 'Creating Events Medicaments...'
 puts "Events Medicaments created"
 
+puts 'Creating Events Maladies...'
+  Event.create!(type: "Maladie",start_time: DateTime.new(2018,04,12,15,00,0), end_time: DateTime.new(2018,04,15,15,00,0), value_string: "Grippe", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2018,8,15,15,00,0), end_time: DateTime.new(2018,8,17,15,00,0), value_string: "Gastro", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2018,11,23,15,00,0), end_time: DateTime.new(2018,11,30,15,00,0), value_string: "Varicelle", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2018,12,20,15,00,0), end_time: DateTime.new(2018,12,24,15,00,0), value_string: "Grippe", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2019,02,03,15,00,0), end_time: DateTime.new(2019,02,8,15,00,0), value_string: "Gastro", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2019,04,20,15,00,0), end_time: DateTime.new(2019,04,24,15,00,0), value_string: "Grippe", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2019,06,10,15,00,0), end_time: DateTime.new(2019,06,12,15,00,0), value_string: "Gastro", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2020,11,9,15,00,0), end_time: DateTime.new(2020,11,12,15,00,0), value_string: "Gastro", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2020,02,20,17,00,0), end_time: DateTime.new(2020,02,25,17,00,0), value_string: "Grippe", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Maladie",start_time: DateTime.new(2021,02,3,15,00,0), end_time: DateTime.new(2021,02,10,15,00,0), value_string: "Gastro", validated: true, baby: leo, user: yoann)
+puts "Events Maladies created"
+
 puts 'Creating Events Couches...'
-puts "Events Vaccins created"
+puts "Events Couches created"
 
 puts 'Finished!'
