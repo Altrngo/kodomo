@@ -24,6 +24,5 @@ class Event < ApplicationRecord
 
   def calculate_sleep
     ((self.end_time - self.start_time)/60).to_f.round(1)
-    #raise
   end
 end

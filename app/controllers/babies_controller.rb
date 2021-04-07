@@ -29,7 +29,6 @@ class BabiesController < ApplicationController
     details_sleep(params[:date_filter])
     details_diapers(params[:date_filter])
     details_milk(params[:date_filter])
-    #raise
   end
 
   def details_health
@@ -45,15 +44,14 @@ class BabiesController < ApplicationController
   end
 
   def details_sleep(date_filter)
-    if date_filter == "Hier"
-      number_of_days = 1
+    if date_filter == "Mois dernier"
+      number_of_days = 30
     elsif date_filter == "Semaine dernière"
       number_of_days = 7
     else
-      number_of_days = 30
+      number_of_days = 1
     end
     duration = 0
-    #raise
     @babyborn = @baby.events.where(type: "Dodo").where("start_time > ?", number_of_days.days.ago)
     @babyborn.each do |event|
       entry = event.calculate_sleep #if event.start_time.day == Date.today.day - number_of_days
@@ -63,22 +61,33 @@ class BabiesController < ApplicationController
   end
 
   def details_diapers(date_filter)
+    if date_filter == "Mois dernier"
+      number_of_days = 30
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 1
+    end
     sum = 0
-    @babydiaper = @baby.events.where(type: "Couche")
+    @babydiaper = @baby.events.where(type: "Couche").where("start_time > ?", number_of_days.days.ago)
     @babydiaper.each do |event|
-      if event.start_time.day == Date.today.day - 1
         sum += 1
       end
-    end
     @diaper = sum
   end
 
   def details_milk(date_filter)
+    if date_filter == "Mois dernier"
+      number_of_days = 30
+    elsif date_filter == "Semaine dernière"
+      number_of_days = 7
+    else
+      number_of_days = 1
+    end
     quantity = 0
-    @babymilk = @baby.events.where(type: "Biberon")
+    @babymilk = @baby.events.where(type: "Biberon").where("start_time > ?", number_of_days.days.ago)
     @babymilk.each do |event|
-      entry = 0
-      entry = event.value_float if event.start_time.day == Date.today.day - 1
+      entry = event.value_float
       quantity += entry
     end
     @milk = quantity
