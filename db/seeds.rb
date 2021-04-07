@@ -1295,32 +1295,32 @@ puts 'Creating Events Repas...'
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,03,30,22,15,0), value_string: "Brocoli, boeuf ", validated: true, baby: leo, user: yoann)
 
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,1,8,20,0), value_string: "Céréales", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,1,17,12,0), value_string: "Pâtes aux aubergines", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,1,12,20,0), value_string: "Cordon bleu", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,1,12,10,0), value_string: "Pâtes aux aubergines", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,1,17,20,0), value_string: "Cordon bleu", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,2,8,15,0), value_string: "Tartines, myrtilles", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,2,12,20,0), value_string: "Salade, lardons, oeuf", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,2,12,20,0), value_string: "Patate douce, poisson", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,2,18,20,0), value_string: "Patate douce, poisson", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,3,07,45,0), value_string: "Pommes, yoghurt", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,3,12,20,0), value_string: "Pizza 4 saisons", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,3,17,12,0), value_string: "Pâtes aux aubergines", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,4,8,02,0), value_string: "Céréales framboises", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,3,17,10,0), value_string: "Pâtes aux aubergines", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,4,8,15,0), value_string: "Céréales framboises", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,4,12,20,0), value_string: "Yoghurt", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,4,12,20,0), value_string: "Salade, lardons, oeuf", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,4,18,20,0), value_string: "Salade, lardons, oeuf", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,5,8,23,0), value_string: "Tartines", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,5,12,20,0), value_string: "Sticks de poissons", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,5,12,20,0), value_string: "Pizza 4 saisons", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,5,18,20,0), value_string: "Pizza 4 saisons", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,6,8,05,0), value_string: "Tartines", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,6,12,20,0), value_string: "Cordon bleu", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,6,18,20,0), value_string: "Cordon bleu", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,6,12,20,0), value_string: "Yoghurt", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,7,8,15,0), value_string: "Tartines", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,7,12,20,0), value_string: "Patate douce, poisson", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,7,12,20,0), value_string: "Sticks de poissons, épinards", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,7,18,20,0), value_string: "Sticks de poissons, épinards", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,8,8,15,0), value_string: "Céréales", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,8,17,12,0), value_string: "Pâtes aux aubergines", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,8,12,20,0), value_string: "Cordon bleu", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,9,8,20,0), value_string: "Céréales", validated: true, baby: leo, user: yoann)
 # Event.create!(type: "Repas",start_time: DateTime.new(2021,04,9,12,20,0), value_string: "Salade, lardons, oeuf", validated: true, baby: leo, user: yoann)
-# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,9,12,20,0), value_string: "Patate douce, poisson", validated: true, baby: leo, user: yoann)
+# Event.create!(type: "Repas",start_time: DateTime.new(2021,04,9,18,20,0), value_string: "Patate douce, poisson", validated: true, baby: leo, user: yoann)
 puts "Events Repas created"
 
 puts 'Creating Events Taille...'
@@ -1333,7 +1333,15 @@ puts 'Creating Events Evenement...'
 puts "Events Evenements created"
 
 puts 'Creating Events Vaccins...'
+  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,04,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,06,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Vaccin",start_time: DateTime.new(2018,11,20,15,00,0), value_string: "ROR", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Vaccin",start_time: DateTime.new(2019,02,20,15,00,0), value_string: "DTP, IPV, Hib, HBV, PCV13, ROR", validated: true, baby: leo, user: yoann)
+  Event.create!(type: "Vaccin",start_time: DateTime.new(2020,02,20,15,00,0), value_string: "MCV-ACWY", validated: true, baby: leo, user: yoann)
 puts "Events Vaccins created"
+
+puts 'Creating Events Medicaments...'
+puts "Events Medicaments created"
 
 puts 'Creating Events Couches...'
 puts "Events Vaccins created"
