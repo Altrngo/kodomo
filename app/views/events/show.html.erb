@@ -26,14 +26,14 @@
         <% end %>
         <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
       <div>
-      <%= link_to edit_event_path(@event), method: :patch do %>
+      <%= link_to edit_event_path(@event) do %>
         <i class="fas fa-pencil-alt"></i>
         <% end %>
       </div>
       <div>
         <%= link_to event_path(@event), method: :delete, data: { confirm: "Voulez-vous vraiment supprimer cet événement #{@event.type}? " } do %>
         <i class="fas fa-trash-alt"></i>
-        <% end %>        
+        <% end %>
       </div>
       </div>
     </div>
