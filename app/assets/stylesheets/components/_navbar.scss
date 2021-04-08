@@ -141,6 +141,9 @@ input {
 #menuToggle:checked ~ .menuEffects {
   opacity: 1;
   visibility: visible;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
