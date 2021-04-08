@@ -24,7 +24,7 @@ class BabiesController < ApplicationController
   def show
     @baby = Baby.find(params[:id])
     @age = @baby.age
-    @event_last = Event.order(:start_time).last
+    @event_last = Event.where(baby: @baby).order(:start_time).last
   end
 
   def details
