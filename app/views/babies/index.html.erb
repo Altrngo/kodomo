@@ -6,7 +6,7 @@
     <% @babies.each do |baby| %>
       <%= link_to baby_path(baby), class: "text-decoration" do %>
         <div class="card baby">
-          <div><%= cl_image_tag baby.photo.key, height: 200, width: 350, crop: :fill, class: "avatar-large" %></div>
+          <div><%= cl_image_tag baby.photo.key, crop: :thumb, class: "avatar-large" %></div>
           <h2 class="baby_name_index"><%= baby.name %></h2>
         </div>
       <% end %>

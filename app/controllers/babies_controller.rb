@@ -36,14 +36,16 @@ class BabiesController < ApplicationController
   end
 
   def details_health
-    if Event.where(type: "Poids") != nil
+    if Event.where(type: "Poids").empty?
+      @weight = Baby.find(params[:baby_id]).weight
+    elsif 
       @weight = Event.where(type: "Poids").last.value_float
-    elsif @weight = Baby.find(params[:baby_id]).weight
     end
 
-    if Event.where(type: "Taille") != nil
+    if Event.where(type: "Taille").empty?
+      @height = Baby.find(params[:baby_id]).height
+    elsif 
       @height = Event.where(type: "Taille").last.value_float
-    elsif @height = Baby.find(params[:baby_id]).height
     end
   end
 

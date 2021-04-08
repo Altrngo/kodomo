@@ -56,6 +56,8 @@
               <% if event.photo.attached? %>
                 <div class="card event baby-profile-card" id="card-type-evenement" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url event.photo.key %>') ">
                   <h2 class="card-type-evenement-text" id="white-text"><%= event.value_string%></h2>
+                <div class="card event baby-profile-card" id="card-type-evenement" style="background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('<%= cloudinary_url event.photo.key, crop: :thumb, gravity: :face %>') ">
+                  <h2 class="card-type-evenement-text" id="white-text"><%= event.value_string%></h2>
                 </div>
               <% end %>
             <% end %>
