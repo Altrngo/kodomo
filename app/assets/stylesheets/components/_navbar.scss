@@ -75,7 +75,7 @@ input {
   top: 0;
   left: 0;
   background: rgba(200, 175, 202, 0.95);
-  z-index: 99;
+  z-index: 98;
 }
 
 .menu label {
@@ -152,7 +152,7 @@ input {
   position: absolute;
   top: 0;
   right: 0;
-  z-index: 4;
+  z-index: 99;
 }
 
 #menuToggle:checked ~ .menuOpen .open:after {
@@ -162,7 +162,7 @@ input {
   position: relative;
   top: 0;
   right: 0;
-  z-index: 4;
+  z-index: 99;
 }
 
 #menuToggle:not(:checked) ~ .menuEffects ul {
