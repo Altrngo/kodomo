@@ -13,7 +13,7 @@
     <div class="col-7">
       <div class="card d-flex flex-row align-items-center justify-content-center">
         <div>
-          <h1><%= @sleep %> min</h1>
+          <h1><%= @sleep.to_i %> min</h1>
           <p>de sommeil</p>
         </div>
       <img src="<%= image_path 'Dodo.png' %>" alt="dodo">
@@ -22,7 +22,7 @@
     <div class="col">
       <div class="card d-flex align-items-center">
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <h1><%= @diaper %></h1>
+          <h1><%= @diaper.to_i %></h1>
           <p>couches</p>
         </div>
         <img class="bg-icon" src="<%= image_path 'Couche.png' %>" alt="lait">
@@ -33,7 +33,7 @@
     <div class="col">
       <div class="card d-flex flex-row align-items-center">
         <div>
-          <h1><%= @milk %> ml</h1>
+          <h1><%= @milk.to_i %> ml</h1>
           <p>de lait ingurgité</p>
         </div>
         <img id="bibi" src="<%= image_path 'Biberon.png' %>" alt="lait">
@@ -44,7 +44,7 @@
     <div class="col-5">
       <div class="card d-flex align-items-center"">
         <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1><%= @weight %> kg</h1>
+        <h1><%= @weight.to_i %> kg</h1>
         <p>Poids actuel</p>
         </div>
         <img class="bg-icon" src="<%= image_path 'Poids.png' %>" alt="poids">
@@ -53,7 +53,7 @@
     <div class="col">
       <div class="card d-flex align-items-center"">
         <div class="d-flex flex-column justify-content-center align-items-center">
-        <h1><%= @height %> cm</h1>
+        <h1><%= @height.to_i %> cm</h1>
         <p>Taille actuelle</p>
         </div>
         <img class="bg-icon" src="<%= image_path 'Taille.png' %>" alt="poids">
