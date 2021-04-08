@@ -24,7 +24,7 @@
             <% if event.type != "Evenement" %>
               <div class="card event" id="card-timeline">
                 <div class="event-icon">
-                  <%= image_tag "#{type}.png", height: 40, width: 40 %>
+                  <%= image_tag "#{event.type}.png", height: 40, width: 40 %>
                 </div>
                 <div class="container-text-timeline">
                   <h2 class="text-timeline"><%= event.type %></h2>
