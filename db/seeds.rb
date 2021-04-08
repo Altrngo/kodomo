@@ -30,12 +30,36 @@ puts "Baby_users Leo is created"
 
 puts 'Creating Events Evenement...'
   file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864279/Babies/bb_pic_d5ufz4.jpg')
-  leo_1 = Event.create!(type: "Evenement",start_time: DateTime.new(2018,03,20,15,00,0), value_string: "Leo a un mois!", validated: true, baby: leo, user: yoann)
-  leo_1.photo.attach(io: file, filename: 'leo_1.jpg', content_type: 'image/jpg')
+  leo_2 = Event.create!(type: "Evenement",start_time: DateTime.new(2018,03,20,15,00,0), value_string: "Déjà un mois!", validated: true, baby: leo, user: yoann)
+  leo_2.photo.attach(io: file, filename: 'leo_2.jpg', content_type: 'image/jpg')
 
   file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864280/Babies/IMG-20170722-WA0015_hrxtyu.jpg')
-  leo_2 = Event.create!(type: "Evenement",start_time: DateTime.new(2018,04,25,15,00,0), value_string: "Leo se dore la pilule", validated: true, baby: leo, user: yoann)
-  leo_2.photo.attach(io: file, filename: 'leo_2.jpg', content_type: 'image/jpg')
+  leo_3 = Event.create!(type: "Evenement",start_time: DateTime.new(2018,05,14,15,00,0), value_string: "Leo se dore la pilule", validated: true, baby: leo, user: yoann)
+  leo_3.photo.attach(io: file, filename: 'leo_3.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864280/Babies/IMG-20190520-WA0199_fulzlo.jpg')
+  leo_4 = Event.create!(type: "Evenement",start_time: DateTime.new(2018,10,25,15,00,0), value_string: "Moment de repos", validated: true, baby: leo, user: yoann)
+  leo_4.photo.attach(io: file, filename: 'leo_4.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864279/Babies/20181021_100057_uqjpbf.jpg')
+  leo_5 = Event.create!(type: "Evenement",start_time: DateTime.new(2019,8,30,15,00,0), value_string: "Balade à vélo", validated: true, baby: leo, user: yoann)
+  leo_5.photo.attach(io: file, filename: 'leo_5.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864281/Babies/IMG-20190807-WA0000_rymhae.jpg')
+  leo_6 = Event.create!(type: "Evenement",start_time: DateTime.new(2020,02,25,15,00,0), value_string: "Leo dans sa cabane", validated: true, baby: leo, user: yoann)
+  leo_6.photo.attach(io: file, filename: 'leo_6.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864280/Babies/IMG-20190709-WA0014_ikx2yp.jpg')
+  leo_7 = Event.create!(type: "Evenement",start_time: DateTime.new(2020,05,30,15,00,0), value_string: "La piscine après le vaccin", validated: true, baby: leo, user: yoann)
+  leo_7.photo.attach(io: file, filename: 'leo_7.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864281/Babies/IMG-20190729-WA0001_t3kiyp.jpg')
+  leo_8 = Event.create!(type: "Evenement",start_time: DateTime.new(2020,11,30,15,00,0), value_string: "En grande réflexion", validated: true, baby: leo, user: yoann)
+  leo_8.photo.attach(io: file, filename: 'leo_8.jpg', content_type: 'image/jpg')
+
+  file = URI.open('https://res.cloudinary.com/dw4harw6z/image/upload/v1617864279/Babies/20200603_074716_zeq53z.jpg')
+  leo_9 = Event.create!(type: "Evenement",start_time: DateTime.new(2021,04,8,18,00,0), value_string: "Bientôt grand frère", validated: true, baby: leo, user: yoann)
+  leo_9.photo.attach(io: file, filename: 'leo_9.jpg', content_type: 'image/jpg')
 puts "Events Evenements created"
 
 # puts 'Creating Events Biberon...'
