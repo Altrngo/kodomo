@@ -1,5 +1,10 @@
 <body>
   <div class="container">
+    <div>
+      <%= link_to event_timeline_baby_path(@event.baby), class: "navbar-brand" do %>
+      <i class="fas fa-chevron-left"></i>
+    <% end %>
+    </div>
     <div class="card" id="card-show">
       <div class="event-show-card-top">
         <div class="event-icon-show">

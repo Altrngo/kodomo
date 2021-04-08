@@ -6,6 +6,7 @@ class EventsController < ApplicationController
     # @health_types = ["Wound", "Vaccine", "Temperature", "Drug", "Disease"]
     # @other_event_types = ["OtherEvent"]
 
+    @baby = Baby.find(params[:baby_id])
     @daily_types =["Biberon", "Repas", "Dodo", "Couche"]
     @health_types = ["Bobo", "Vaccin", "Temperature", "Medicament", "Maladie", "Taille", "Poids"]
     @other_event_types = ["Evenement"]

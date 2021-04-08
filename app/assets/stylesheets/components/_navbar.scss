@@ -10,8 +10,15 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
 input {
   display: none;
+}
+
+#menuArea {
+  position: absolute;
+  top: 30px;
+  right: 30px;
 }
 
 .open {
