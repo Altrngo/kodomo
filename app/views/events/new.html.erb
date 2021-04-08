@@ -1,6 +1,11 @@
 
 <body>
   <div class="container">
+    <div>
+      <%= link_to choose_type_baby_events_path(@baby), class: "navbar-brand" do %>
+      <i class="fas fa-chevron-left"></i>
+    <% end %>
+    </div>
     <h1><%= @event.type %></h1>
     <h2>Nouvel Evénement</h2>
     <%= simple_form_for [@baby, @event] do |f| %>
@@ -14,7 +19,7 @@
       <%= f.input :end_time, as: :datetime, :label => 'Fin', html5: true if @event.type == "Dodo" || @event.type == "Maladie" %>
       <%= f.input :comment, :label => 'Commentaire' %>
       <%= f.input :photo, as: :file if @event.type == "Evenement" || @event.type == "Bobo" || @event.type == "Medicament" || @event.type == "Maladie" || @event.type =="Repas" %>
-      <%= f.input :type, as: :hidden %> 
+      <%= f.input :type, as: :hidden %>
       <%= f.submit %>
     <% end %>
   </div>

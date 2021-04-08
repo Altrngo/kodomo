@@ -2,7 +2,7 @@
     <i class="fas fa-check-circle"></i>
     <% if @baby && @baby.id %>
       <%= link_to choose_type_baby_events_path(@baby) do%>
-      <div class="button-circle mb-5">
+      <div class="button-circle mb-4">
         <%= image_tag "add.png", class: "circle-plus" %>
       </div>
       <%end %>

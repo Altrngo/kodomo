@@ -1,5 +1,10 @@
 <body>
   <div class="container">
+    <div>
+      <%= link_to babies_path, class: "navbar-brand" do %>
+      <i class="fas fa-chevron-left"></i>
+    <% end %>
+    </div>
     <h1>Nouvel enfant</h1>
     <%= simple_form_for @baby do |f| %>
     <%= f.input :name, label: "Nom" %>
