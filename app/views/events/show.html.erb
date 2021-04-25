@@ -38,8 +38,11 @@
           <p class="text-timeline"><%= @event.value_float %> °C</p>
           <% elsif @event.type == "Dodo" %>
           <p class="text-timeline" id="time"> De <%= @event.start_time.strftime("%Hh%M") %> à
-            <%= @event.end_time.strftime("%Hh%M") %>
+          <p><% if @event.end_time.nil? %> Maintenant</p>
+              <% else %> 
+              <%= @event.end_time.strftime("%Hh%M") %>
             <p class="text-timeline">Durée <%= @event.calculate_duration %></p>
+            <% end %>
           <% end %>
           <p class="text-timeline d-flex mt-3"><%= @event.comment %></p>
           <% if @event.type == "Evenement" || @event.type == "Maladie" || @event.type == "Repas" || @event.type == "Bobo" || @event.type == "Medicament" || @event.type == "Taille"  %>

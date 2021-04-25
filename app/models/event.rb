@@ -48,6 +48,10 @@ class Event < ApplicationRecord
     end
 
   def calculate_sleep
+    if !end_time.nil?
+      return "Sièste en cours..."
+    else
     ((self.end_time - self.start_time)/60).to_f.round(1)
+    end
   end
 end
