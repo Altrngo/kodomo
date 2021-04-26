@@ -16,6 +16,8 @@ class Baby < ApplicationRecord
       return "#{absolute[:years]} ans et #{absolute[:months]} mois"
     elsif absolute[:months] > 1
       return "#{absolute[:months]} mois et #{absolute[:days]} jours"
+    elsif absolute[:weeks] > 1
+      return "#{absolute[:weeks]} semaines et #{absolute[:days]} jours"
     else
       return "#{absolute[:days]} jours et #{absolute[:hours]} heures"
     end
